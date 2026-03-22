@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>catARACT - Onderzoek & Informatie</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👁️</text></svg>">
+<style>
+:root {
+    --bg: #f0f4f8;
+    --bg-card: #ffffff;
+    --bg-dark: #1a2332;
+    --bg-hero: linear-gradient(135deg, #1a2332 0%, #2d4a6f 50%, #3a7bd5 100%);
+    --text: #2c3e50;
+    --text-dim: #64748b;
+    --text-light: #f0f4f8;
+    --accent: #3a7bd5;
+    --accent-light: #e8f0fe;
+    --green: #10b981;
+    --orange: #f59e0b;
+    --red: #ef4444;
+    --purple: #8b5cf6;
+    --border: #e2e8f0;
+    --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Nav */
+nav { background: var(--bg-dark); padding: 0 24px; display: flex; align-items: center; height: 56px; position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-size: 20px; font-weight: 800; color: #fff; letter-spacing: 1px; }
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 4px; margin-left: 32px; }
+.nav-links a { color: #cbd5e1; padding: 8px 14px; border-radius: 6px; font-size: 13px; font-weight: 500; transition: all 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: #fff; background: rgba(255,255,255,0.1); text-decoration: none; }
+
+/* Hero */
+.hero { background: var(--bg-hero); color: #fff; padding: 80px 24px 60px; text-align: center; }
+.hero h1 { font-size: 48px; font-weight: 800; margin-bottom: 16px; }
+.hero h1 .highlight { color: #60a5fa; }
+.hero p { font-size: 18px; color: #94a3b8; max-width: 700px; margin: 0 auto 32px; }
+.hero-stats { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; }
+.hero-stat { text-align: center; }
+.hero-stat .num { font-size: 36px; font-weight: 800; color: #60a5fa; }
+.hero-stat .label { font-size: 12px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; }
+
+/* Container */
+.container { max-width: 1200px; margin: 0 auto; padding: 40px 24px; }
+.section-title { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+.section-sub { color: var(--text-dim); margin-bottom: 24px; }
+
+/* Cards grid */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 20px; margin-bottom: 40px; }
+.card { background: var(--bg-card); border-radius: 12px; padding: 24px; box-shadow: var(--shadow); border: 1px solid var(--border); transition: transform 0.2s, box-shadow 0.2s; }
+.card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.card-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 24px; }
+.card-icon.blue { background: var(--accent-light); color: var(--accent); }
+.card-icon.green { background: #d1fae5; color: var(--green); }
+.card-icon.orange { background: #fef3c7; color: var(--orange); }
+.card-icon.red { background: #fee2e2; color: var(--red); }
+.card-icon.purple { background: #ede9fe; color: var(--purple); }
+.card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+.card p { color: var(--text-dim); font-size: 14px; }
+.card ul { color: var(--text-dim); font-size: 14px; padding-left: 20px; }
+.card ul li { margin-bottom: 4px; }
+
+/* Info blocks */
+.info-block { background: var(--bg-card); border-radius: 12px; padding: 32px; box-shadow: var(--shadow); border: 1px solid var(--border); margin-bottom: 24px; }
+.info-block h2 { font-size: 22px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+.info-block h3 { font-size: 16px; font-weight: 600; margin: 16px 0 8px; color: var(--accent); }
+
+/* Badge */
+.badge { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+.badge.green { background: #d1fae5; color: #065f46; }
+.badge.orange { background: #fef3c7; color: #92400e; }
+.badge.red { background: #fee2e2; color: #991b1b; }
+.badge.blue { background: var(--accent-light); color: #1e40af; }
+.badge.purple { background: #ede9fe; color: #5b21b6; }
+
+/* Table */
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { text-align: left; padding: 10px 12px; background: var(--bg); font-weight: 600; border-bottom: 2px solid var(--border); }
+td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
+tr:hover td { background: var(--accent-light); }
+
+/* Collapsible */
+.collapsible { cursor: pointer; user-select: none; }
+.collapsible::after { content: 'expand_more'; font-family: 'Material Icons'; float: right; transition: transform 0.3s; }
+.collapsible.open::after { transform: rotate(180deg); }
+.collapsible-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.collapsible-content.open { max-height: 2000px; }
+
+/* Sources */
+.sources { background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-top: 16px; }
+.sources h4 { font-size: 13px; font-weight: 600; margin-bottom: 8px; color: var(--text-dim); }
+.sources a { font-size: 12px; display: block; margin-bottom: 4px; }
+
+/* Footer */
+footer { background: var(--bg-dark); color: #94a3b8; padding: 32px 24px; text-align: center; font-size: 13px; }
+footer a { color: #60a5fa; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 32px; }
+    .hero-stats { gap: 24px; }
+    .cards { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-logo">cat<span>ARACT</span></div>
+    <div class="nav-links">
+        <a href="index.html" class="active">Overzicht</a>
+        <a href="behandelingen.html">Behandelingen</a>
+        <a href="onderzoek.html">Onderzoek</a>
+        <a href="voeding.html">Voeding & Preventie</a>
+        <a href="klinieken.html">Klinieken NL</a>
+        <a href="bronnen.html">Bronnen</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>cat<span class="highlight">ARACT</span></h1>
+    <p>Alles over cataract (staar): oorzaken, behandelingen, nieuwste onderzoek, specialisten en voeding. Kennis is kracht.</p>
+    <div class="hero-stats">
+        <div class="hero-stat">
+            <div class="num">175.000</div>
+            <div class="label">Operaties/jaar in NL</div>
+        </div>
+        <div class="hero-stat">
+            <div class="num">100+</div>
+            <div class="label">Genen geidentificeerd</div>
+        </div>
+        <div class="hero-stat">
+            <div class="num">1:5000</div>
+            <div class="label">Aangeboren cataract</div>
+        </div>
+        <div class="hero-stat">
+            <div class="num">~100%</div>
+            <div class="label">Succes operatie</div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <h2 class="section-title">Wat is cataract?</h2>
+    <p class="section-sub">Bij cataract (staar) wordt de ooglens troebel, waardoor het zicht wazig wordt.</p>
+
+    <div class="info-block">
+        <p>De ooglens is normaal helder en laat licht door naar het netvlies. Bij cataract worden de eiwitten in de lens troebel (aggregatie van crystalline-eiwitten), waardoor het licht niet meer goed doorgelaten wordt. Dit kan in een of beide ogen voorkomen.</p>
+        <h3>Types cataract</h3>
+        <table>
+            <tr><th>Type</th><th>Beschrijving</th><th>Leeftijd</th></tr>
+            <tr><td><strong>Congenitaal</strong></td><td>Aangeboren, vaak genetisch (LSS-mutatie)</td><td>Vanaf geboorte</td></tr>
+            <tr><td><strong>Juveniel</strong></td><td>Ontstaat in de eerste 10 levensjaren</td><td>0-10 jaar</td></tr>
+            <tr><td><strong>Traumatisch</strong></td><td>Door letsel aan het oog</td><td>Elke leeftijd</td></tr>
+            <tr><td><strong>Secundair</strong></td><td>Door medicatie (steroiden), diabetes, uveitis</td><td>Elke leeftijd</td></tr>
+            <tr><td><strong>Nucleair</strong></td><td>Kern van de lens wordt troebel (meest voorkomend)</td><td>50+ jaar</td></tr>
+            <tr><td><strong>Corticaal</strong></td><td>Schorslaag wordt troebel, spaakachtige opaciteiten</td><td>50+ jaar</td></tr>
+            <tr><td><strong>Subcapsulair</strong></td><td>Achterkant lens, vaak door steroiden</td><td>40+ jaar</td></tr>
+        </table>
+    </div>
+
+    <h2 class="section-title">Oorzaken</h2>
+    <p class="section-sub">Vooral bij jongere patienten zijn er specifieke risicofactoren.</p>
+
+    <div class="cards">
+        <div class="card">
+            <div class="card-icon blue"><span class="material-icons">psychology</span></div>
+            <h3>Genetisch</h3>
+            <p>100+ genen geidentificeerd. Mutaties in het <strong>lanosterol synthase (LSS)</strong> gen veroorzaken autosomaal recessieve aangeboren cataract. Als ouders cataract hadden, is het risico hoger.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon orange"><span class="material-icons">bloodtype</span></div>
+            <h3>Diabetes</h3>
+            <p>Hoge bloedsuiker leidt tot ophoping van <strong>sorbitol</strong> in de lens, wat troebeling veroorzaakt. Jonge diabetespatienten ontwikkelen vaak eerder cataract.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon red"><span class="material-icons">wb_sunny</span></div>
+            <h3>UV-straling</h3>
+            <p>Langdurige blootstelling aan ultraviolet licht versnelt lenstroebeling. Beschermende zonnebrillen met UV-filter zijn essentieel.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon purple"><span class="material-icons">medication</span></div>
+            <h3>Medicatie</h3>
+            <p>Langdurig gebruik van <strong>corticosteroiden</strong> (tabletten, inhalers, oogdruppels, huidcremes) kan steroide-cataract veroorzaken.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon green"><span class="material-icons">sports_mma</span></div>
+            <h3>Trauma</h3>
+            <p>Meest voorkomende oorzaak van eenzijdige cataract. Kan door een stomp of doorborend letsel aan het oog ontstaan.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon blue"><span class="material-icons">devices</span></div>
+            <h3>Leefstijl</h3>
+            <p>Roken, alcohol, slechte voeding en overmatig schermgebruik verhogen oxidatieve stress in de ogen. Obesitas en hypertensie zijn ook risicofactoren.</p>
+        </div>
+    </div>
+
+    <h2 class="section-title">Nieuwste doorbraken</h2>
+    <p class="section-sub">Het onderzoek staat niet stil. Dit zijn de meest veelbelovende ontwikkelingen.</p>
+
+    <div class="cards">
+        <div class="card">
+            <div class="card-icon green"><span class="material-icons">science</span></div>
+            <h3>Stamcel lens-regeneratie</h3>
+            <p>Onderzoekers van UC San Diego ontwikkelden een methode waarbij <strong>endogene stamcellen</strong> in het oog de lens laten teruggroeien na operatie bij baby's. In een trial met 12 baby's groeide een transparante lens binnen 3 maanden.</p>
+            <p style="margin-top:8px"><span class="badge green">Doorbraak</span> <span class="badge blue">Fase: klinische trials</span></p>
+        </div>
+        <div class="card">
+            <div class="card-icon purple"><span class="material-icons">water_drop</span></div>
+            <h3>Oogdruppels (Lanosterol / Oxysterolen)</h3>
+            <p>Lanosterol-oogdruppels losten cataract op bij 11 van 13 konijnen. <strong>Oxysterol-oogdruppels</strong> zijn nu in Fase 3 klinische trials (2025-2026). Potentieel alternatief voor chirurgie.</p>
+            <p style="margin-top:8px"><span class="badge orange">Veelbelovend maar controversieel</span></p>
+        </div>
+        <div class="card">
+            <div class="card-icon blue"><span class="material-icons">biotech</span></div>
+            <h3>Genetische diagnostiek</h3>
+            <p><strong>Next-generation sequencing</strong> kan de exacte genetische oorzaak van aangeboren cataract vaststellen in 75% van de families. Dit opent de deur naar gerichte therapie.</p>
+            <p style="margin-top:8px"><span class="badge blue">Beschikbaar</span></p>
+        </div>
+    </div>
+
+    <h2 class="section-title">Snel naar</h2>
+    <div class="cards">
+        <div class="card" onclick="location.href='behandelingen.html'" style="cursor:pointer">
+            <div class="card-icon blue"><span class="material-icons">healing</span></div>
+            <h3>Behandelingen &rarr;</h3>
+            <p>Operatietechnieken, kunstlenzen (monofocaal/multifocaal/trifocaal), herstel, risico's en wat te verwachten.</p>
+        </div>
+        <div class="card" onclick="location.href='onderzoek.html'" style="cursor:pointer">
+            <div class="card-icon green"><span class="material-icons">science</span></div>
+            <h3>Onderzoek &rarr;</h3>
+            <p>Lanosterol, stamcellen, VP1-001, C-KAD, Fase 3 trials. Alle wetenschappelijke ontwikkelingen.</p>
+        </div>
+        <div class="card" onclick="location.href='voeding.html'" style="cursor:pointer">
+            <div class="card-icon orange"><span class="material-icons">restaurant</span></div>
+            <h3>Voeding & Preventie &rarr;</h3>
+            <p>Luteine, zeaxanthine, NAC-oogdruppels, antioxidanten, vitamine C/E, en wat echt werkt.</p>
+        </div>
+        <div class="card" onclick="location.href='klinieken.html'" style="cursor:pointer">
+            <div class="card-icon purple"><span class="material-icons">local_hospital</span></div>
+            <h3>Klinieken NL &rarr;</h3>
+            <p>Het Oogziekenhuis Rotterdam, Bergman Clinics, Amsterdam UMC, en meer. Gespecialiseerde centra voor kinderen.</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>catARACT &mdash; Informatief platform over cataract (staar). Geen medisch advies. Raadpleeg altijd een oogarts.</p>
+    <p style="margin-top:8px">Gebouwd met <a href="https://claude.ai" target="_blank">Claude</a> | <a href="https://github.com/AnneVersion" target="_blank">Data Consultants</a></p>
+</footer>
+
+</body>
+</html>
