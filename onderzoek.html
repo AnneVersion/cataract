@@ -3,16 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Onderzoek - catARACT</title>
+<title>Lopend Onderzoek - catARACT</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👁️</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F441;</text></svg>">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
     <div class="nav-logo">cat<span>ARACT</span></div>
-    <div class="nav-links">
+    <span class="nav-badge">RESEARCH</span>
+    <div class="nav-links" id="nav-links">
         <a href="index.html">Overzicht</a>
         <a href="behandelingen.html">Behandelingen</a>
         <a href="onderzoek.html" class="active">Onderzoek</a>
@@ -20,143 +21,387 @@
         <a href="klinieken.html">Klinieken NL</a>
         <a href="bronnen.html">Bronnen</a>
     </div>
+    <span class="nav-dc"><a href="https://anneversion.github.io/dataconsultants" target="_blank">Data Consultants</a></span>
+    <button class="nav-toggle" onclick="document.getElementById('nav-links').classList.toggle('open')">menu</button>
 </nav>
 
 <div class="page-header">
-    <h1><span class="material-icons" style="font-size:36px;vertical-align:middle">science</span> Wetenschappelijk onderzoek</h1>
-    <p>De nieuwste doorbraken in cataractonderzoek (2024-2026)</p>
+    <h1>Lopend Onderzoek</h1>
+    <p>Alle wetenschappelijke doorbraken en lopende klinische studies over cataract — in begrijpelijke taal</p>
 </div>
 
 <div class="container">
 
+    <div class="alert info">
+        <span class="material-icons">info</span>
+        <span>De enige bewezen behandeling voor cataract is nog steeds een <strong>operatie</strong>. Maar er wordt hard gewerkt aan alternatieven. Hieronder staat alles wat er op dit moment onderzocht wordt, met eerlijke inschatting van hoe ver het is.</span>
+    </div>
+
+    <!-- Status overzicht -->
+    <h2 class="section-title">Overzicht — waar staat het onderzoek?</h2>
+    <p class="section-sub">Van "nog in het lab" tot "bijna op de markt" — een eerlijk overzicht</p>
+
+    <table>
+        <tr><th>Onderzoek</th><th>Wat is het?</th><th>Status</th><th>Bewijs</th></tr>
+        <tr>
+            <td><strong>Stamcel lens-regeneratie</strong></td>
+            <td>De lens laten teruggroeien vanuit eigen stamcellen</td>
+            <td><span class="badge green">12 baby's behandeld</span></td>
+            <td><span class="evidence high">FASE 1/2</span></td>
+        </tr>
+        <tr>
+            <td><strong>C-KAD oogdruppels (EDTA)</strong></td>
+            <td>Druppels die troebeling oplossen door metalen te binden</td>
+            <td><span class="badge green">Fase 3 goedgekeurd door FDA</span></td>
+            <td><span class="evidence high">FASE 2 KLAAR</span></td>
+        </tr>
+        <tr>
+            <td><strong>mRNA gentherapie (lanosterol)</strong></td>
+            <td>Injectie die de lens zelf lanosterol laat maken</td>
+            <td><span class="badge blue">Ratten, succesvol</span></td>
+            <td><span class="evidence preclinical">PREKLINISCH</span></td>
+        </tr>
+        <tr>
+            <td><strong>Lanosterol oogdruppels</strong></td>
+            <td>Druppels die eiwitklontering in de lens omkeren</td>
+            <td><span class="badge orange">Tegenstrijdige resultaten</span></td>
+            <td><span class="evidence emerging">CONTROVERSIEEL</span></td>
+        </tr>
+        <tr>
+            <td><strong>VP1-001 / TPT-161</strong></td>
+            <td>Molecuul dat lens-eiwitten stabiliseert</td>
+            <td><span class="badge blue">Muizen, succesvol</span></td>
+            <td><span class="evidence preclinical">PREKLINISCH</span></td>
+        </tr>
+        <tr>
+            <td><strong>CRISPR gentherapie</strong></td>
+            <td>DNA-reparatie van de mutatie die staar veroorzaakt</td>
+            <td><span class="badge purple">Verwant oogonderzoek loopt</span></td>
+            <td><span class="evidence emerging">CONCEPTUEEL</span></td>
+        </tr>
+        <tr>
+            <td><strong>Femtoseconde laser (kinderen)</strong></td>
+            <td>Precisie-laser voor betere operaties bij kinderen</td>
+            <td><span class="badge green">Goedgekeurd, in gebruik</span></td>
+            <td><span class="evidence high">KLINISCH</span></td>
+        </tr>
+        <tr>
+            <td><strong>AI diagnose (CC-Cruiser)</strong></td>
+            <td>Computer die aangeboren staar herkent op foto's</td>
+            <td><span class="badge green">Gevalideerd in ziekenhuizen</span></td>
+            <td><span class="evidence high">KLINISCH</span></td>
+        </tr>
+        <tr>
+            <td><strong>NAC oogdruppels</strong></td>
+            <td>Antioxidant-druppels (N-acetylcarnosine)</td>
+            <td><span class="badge red">Onvoldoende bewijs</span></td>
+            <td><span class="evidence moderate">ONBEWEZEN</span></td>
+        </tr>
+    </table>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══ 1. STAMCELREGENERATIE ═══ -->
+    <h2 class="section-title">1. Stamcel lens-regeneratie</h2>
+    <p class="section-sub">De lens laten teruggroeien vanuit de eigen stamcellen van het oog — de heilige graal</p>
+
     <div class="info-block">
-        <h2><span class="material-icons">auto_fix_high</span> Stamcel lens-regeneratie <span class="badge green">Grootste doorbraak</span></h2>
-        <p>Onderzoekers van UC San Diego (Dr. Kang Zhang) hebben een methode ontwikkeld waarbij de eigen stamcellen van het oog een nieuwe, functionele lens laten groeien na cataractoperatie.</p>
+        <h2><span class="material-icons" style="color:var(--green)">biotech</span> Wat is het?</h2>
+        <p>In je oog zitten stamcellen aan de rand van de lens. Normaal worden die bij een staaroperatie beschadigd. Onderzoekers van <strong>UC San Diego</strong> en <strong>Sun Yat-sen University (China)</strong> bedachten een manier om die stamcellen te sparen: ze maakten een <strong>heel klein sneetje</strong> (1-1.5mm) aan de zijkant van de lens in plaats van een groot gat in het midden.</p>
+        <p>Het resultaat? De stamcellen bleven leven en <strong>groeiden uit tot een nieuwe, heldere lens</strong> — alsof het oog zichzelf herstelde.</p>
+
+        <h3>Hoe ver is het?</h3>
+        <p><strong>12 baby's met aangeboren staar</strong> zijn behandeld met deze techniek. Bij allemaal groeide een functionele lens terug binnen 3 maanden, met verbetering van het zicht.<span class="ref" title="Nature 2016">[1]</span></p>
+
+        <div class="alert success">
+            <span class="material-icons">check_circle</span>
+            <span><strong>Doorbraak:</strong> Dit is de eerste keer dat een menselijke lens is geregenereerd. Gepubliceerd in <em>Nature</em> (het meest prestigieuze wetenschappelijke tijdschrift ter wereld).</span>
+        </div>
+
+        <h3>Maar...</h3>
+        <ul>
+            <li>Bij <strong>4 van de 24 ogen</strong> kwam de staar terug — logisch, want de stamcellen hebben dezelfde genetische mutatie</li>
+            <li>Alleen getest bij <strong>baby's</strong> — bij volwassenen regenereert de lens veel langzamer</li>
+            <li>Geen nieuwe klinische trial-updates sinds 2016</li>
+            <li>In 2025: onderzoekers ontdekten dat de lens <strong>niet volledig immuun-geprivilegieerd</strong> is — dit kan de regeneratie beinvloeden</li>
+        </ul>
+
+        <h3>Relevant voor haar?</h3>
+        <p>Op dit moment <strong>niet direct</strong>. Ze is al geopereerd en heeft kunstlenzen. Maar als deze techniek doorontwikkeld wordt voor volwassenen, zou het in de toekomst mogelijk zijn om een kunstlens te vervangen door een geregenereerde biologische lens. Dat zou accommodatie (scherpstellen op verschillende afstanden) mogelijk maken — iets wat kunstlenzen niet kunnen.</p>
+
+        <div class="sources">
+            <h4>Bronnen</h4>
+            <ol>
+                <li>Lin H, et al. "Lens regeneration using endogenous stem cells with gain of visual function." <em>Nature</em> 531, 323-328 (2016). <a href="https://www.nature.com/articles/nature17181" target="_blank">doi:10.1038/nature17181</a></li>
+                <li><a href="https://today.ucsd.edu/story/stem_cells_regenerate_human_lens_after_cataract_surgery_restoring_vision" target="_blank">UC San Diego persbericht</a></li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══ 2. C-KAD OOGDRUPPELS ═══ -->
+    <h2 class="section-title">2. C-KAD oogdruppels (EDTA)</h2>
+    <p class="section-sub">Het verst gevorderde medicijn tegen staar — zonder operatie</p>
+
+    <div class="info-block">
+        <h2><span class="material-icons" style="color:var(--teal)">water_drop</span> Wat is het?</h2>
+        <p>C-KAD is een oogdruppel met <strong>2.6% EDTA</strong> (een stof die zware metalen bindt). Het idee: zware metalen in de lens dragen bij aan troebeling. Door die metalen weg te halen, wordt de lens weer helderder.</p>
+
+        <h3>Resultaten Fase 2</h3>
+        <div class="stat-grid">
+            <div class="stat-item">
+                <div class="num">42.9%</div>
+                <div class="label">Verbetering contrast (C-KAD)</div>
+            </div>
+            <div class="stat-item">
+                <div class="num">15.0%</div>
+                <div class="label">Verbetering contrast (placebo)</div>
+            </div>
+        </div>
+        <p>Na 120 dagen toonden 42.9% van de ogen behandeld met C-KAD een significante verbetering van het contrastzicht, tegenover slechts 15% in de placebogroep.<span class="ref" title="AJO 2024">[2]</span></p>
+
+        <div class="alert info">
+            <span class="material-icons">info</span>
+            <span><strong>FDA heeft Fase 3 goedgekeurd.</strong> Dit betekent dat de druppels nu getest worden op een grote groep mensen. Als Fase 3 slaagt, kan het op de markt komen.</span>
+        </div>
+
+        <h3>Relevant voor haar?</h3>
+        <p><strong>Waarschijnlijk niet direct.</strong> C-KAD richt zich op ouderdomsstaar in een vroeg stadium (nucleaire sclerose en corticale cataract). Zij heeft kunstlenzen, dus er is geen natuurlijke lens meer om te behandelen. Maar het is een hoopvol teken dat er niet-chirurgische behandelingen komen.</p>
+
+        <div class="sources">
+            <h4>Bronnen</h4>
+            <ol>
+                <li><a href="https://www.ophthalmologytimes.com/view/promising-non-surgical-treatment-for-early-cataracts-insights-from-a-phase-ii-clinical-trial" target="_blank">Ophthalmology Times - Phase II trial</a></li>
+                <li><a href="https://healthcare.utah.edu/moran/news/2024/08/new-research-analysis-supports-further-testing-of-eye-drops-hoped-reverse-cataracts" target="_blank">University of Utah - Further testing supported</a></li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══ 3. mRNA GENTHERAPIE ═══ -->
+    <h2 class="section-title">3. mRNA gentherapie (lanosterol synthase)</h2>
+    <p class="section-sub">De technologie achter de COVID-vaccins, nu toegepast op het oog</p>
+
+    <div class="info-block">
+        <h2><span class="material-icons" style="color:var(--purple)">vaccines</span> Wat is het?</h2>
+        <p>Je kent mRNA misschien van de COVID-vaccins van Pfizer en Moderna. Dezelfde technologie wordt nu gebruikt voor het oog. Onderzoekers verpakten mRNA (een "recept" voor een eiwit) in <strong>lipide nanodeeltjes</strong> (piepkleine vetbolletjes) en injecteerden die in het oog van ratten.</p>
+        <p>Het mRNA bevat de instructie om <strong>lanosterol synthase</strong> aan te maken — het enzym dat lanosterol produceert. Lanosterol is een natuurlijke stof in de lens die eiwitklontering (de oorzaak van staar) kan voorkomen en omkeren.</p>
+
+        <h3>Resultaat</h3>
+        <p>Bij ratten met staar verbeterde de lenstransparantie significant. De injectie in de voorste oogkamer (intracameraal) werkte het beste — het mRNA bleef wekenlang actief in de lens.<span class="ref" title="Nat Commun 2025">[3]</span></p>
+
+        <div class="alert warning">
+            <span class="material-icons">science</span>
+            <span><strong>Nog vroeg:</strong> Dit is alleen bij ratten getest. Het kan nog 10-15 jaar duren voordat dit bij mensen beschikbaar is. Maar het is de meest veelbelovende nieuwe richting.</span>
+        </div>
+
+        <h3>Relevant voor haar?</h3>
+        <p><strong>Toekomstmuziek.</strong> Als deze technologie werkt bij mensen, zou het theoretisch nastaar (troebeling achter de kunstlens) kunnen voorkomen of behandelen. Maar het is nog ver weg van klinische toepassing.</p>
+
+        <div class="sources">
+            <h4>Bron</h4>
+            <ol>
+                <li>"Ocular delivery of LNP-formulated mRNA encoding lanosterol synthase ameliorates cataract in rats." <em>Nature Communications</em> (2025). <a href="https://www.nature.com/articles/s41467-025-63553-5" target="_blank">doi:10.1038/s41467-025-63553-5</a></li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══ 4. LANOSTEROL OOGDRUPPELS ═══ -->
+    <h2 class="section-title">4. Lanosterol oogdruppels</h2>
+    <p class="section-sub">De beroemde "staar-oplossende druppels" uit 2015 — wat is ervan waar?</p>
+
+    <div class="info-block">
+        <h2><span class="material-icons" style="color:var(--orange)">water_drop</span> Het verhaal</h2>
+        <p>In 2015 publiceerde <em>Nature</em> een baanbrekend artikel: lanosterol (een natuurlijke vetachtige stof in de lens) kon bij honden staar <strong>laten oplossen</strong> via oogdruppels. Het nieuws ging de wereld over. Miljoten mensen hoopten op druppels in plaats van een operatie.</p>
+
+        <h3>Maar toen...</h3>
+        <p>Andere onderzoekers probeerden het na te doen. Het lukte <strong>niet altijd</strong>:</p>
+        <ul>
+            <li><strong>2019 (Scientific Reports):</strong> 25 mM lanosterol faalde bij menselijke cataract-lenzen<span class="ref" title="Sci Rep 2019">[4]</span></li>
+            <li><strong>2024 (Frontiers in Genetics):</strong> Grote genetische studie (45.449 patienten) vond <strong>geen verband</strong> tussen lanosterol-genen en cataract-risico<span class="ref" title="Front Genet 2024">[5]</span></li>
+            <li>Het molecuul is groot, slecht oplosbaar, en wordt snel afgebroken</li>
+        </ul>
+
+        <div class="alert danger">
+            <span class="material-icons">warning</span>
+            <span><strong>Eerlijk antwoord:</strong> Er zijn geen grote, gecontroleerde klinische studies bij mensen die bewijzen dat lanosterol-druppels staar kunnen genezen. De oorspronkelijke resultaten bij honden zijn niet betrouwbaar gerepliceerd. Koop geen "lanosterol oogdruppels" online — ze zijn niet bewezen effectief.</span>
+        </div>
+
+        <div class="sources">
+            <h4>Bronnen</h4>
+            <ol>
+                <li>Zhao L, et al. <em>Nature</em> 523, 607-611 (2015). <a href="https://www.nature.com/articles/nature14650" target="_blank">doi:10.1038/nature14650</a></li>
+                <li>"Failure of oxysterols." <em>Scientific Reports</em> (2019). <a href="https://www.nature.com/articles/s41598-019-44676-4" target="_blank">doi:10.1038/s41598-019-44676-4</a></li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══ 5. CRISPR ═══ -->
+    <h2 class="section-title">5. CRISPR genbewerking</h2>
+    <p class="section-sub">DNA-reparatie — de fout in het gen herstellen die de staar veroorzaakt</p>
+
+    <div class="info-block">
+        <h2><span class="material-icons" style="color:var(--accent)">edit_note</span> Wat is CRISPR?</h2>
+        <p>CRISPR is een technologie waarmee wetenschappers <strong>heel precies een stukje DNA kunnen knippen en repareren</strong>. Denk aan het als een "zoek-en-vervang" functie, maar dan voor je genen. Als aangeboren staar wordt veroorzaakt door een foutje in een gen (mutatie), zou je dat foutje in theorie kunnen repareren.</p>
+
+        <h3>Waar staat het?</h3>
+        <p>Er is <strong>nog geen CRISPR-studie specifiek voor cataract</strong>. Maar er is een verwant succesverhaal:</p>
+        <p>De <strong>BRILLIANCE trial</strong> gebruikte CRISPR bij 14 mensen (waaronder 2 kinderen van 10 en 14 jaar) met een erfelijke vorm van blindheid (Leber Congenitale Amaurosis). Bij <strong>11 van de 14</strong> verbeterde het zicht. Dit was de eerste keer dat CRISPR direct in een menselijk oog werd gebruikt.<span class="ref" title="BRILLIANCE">[6]</span></p>
+
+        <h3>Relevant voor haar?</h3>
+        <p><strong>Toekomst, maar veelbelovend.</strong> Er zijn 115+ genen bekend die aangeboren staar veroorzaken. In theorie zou CRISPR de genetische fout kunnen herstellen. Maar:</p>
+        <ul>
+            <li>Eerst moet de <strong>exacte genetische oorzaak</strong> van haar staar bepaald worden (via genetisch onderzoek)</li>
+            <li>De technologie is er nog niet voor cataract-specifieke genen</li>
+            <li>Maar de BRILLIANCE trial bewijst dat oog-CRISPR bij kinderen <strong>veilig en effectief</strong> kan zijn</li>
+        </ul>
+
+        <div class="sources">
+            <h4>Bron</h4>
+            <ol>
+                <li><a href="https://masseyeandear.org/news/press-releases/2024/05/crispr-gene-editing-improves-vision-for-people-with-inherited-blindness" target="_blank">Mass Eye and Ear - BRILLIANCE trial resultaten (2024)</a></li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══ 6. FEMTOSECONDE LASER ═══ -->
+    <h2 class="section-title">6. Femtoseconde laser voor kinderen</h2>
+    <p class="section-sub">Precisie-chirurgie met laser in plaats van een mes</p>
+
+    <div class="info-block">
+        <h2><span class="material-icons" style="color:var(--teal)">precision_manufacturing</span> Wat is het?</h2>
+        <p>Bij een gewone staaroperatie maakt de chirurg <strong>met de hand</strong> een rond gaatje in het lenskapsel. Bij kinderen is dat extra moeilijk omdat het kapsel veel elastischer is dan bij volwassenen — het scheurt makkelijk.</p>
+        <p>Een femtoseconde laser maakt dit gaatje met extreme precisie — op de <strong>micrometer</strong> nauwkeurig. In 2020 werd de <strong>Femto LDV Z8</strong> goedgekeurd als eerste femtoseconde laser voor gebruik bij kinderen.</p>
+
+        <h3>Resultaten (2025)</h3>
+        <p>Een studie met 13 ogen van 10 kinderen (gemiddeld 3.1 jaar) toonde aan dat de laser een perfect rond kapsel-gaatje maakt. Geen intra-operatieve complicaties. De onderzoekers ontwikkelden ook een formule (Bochum formule) die rekening houdt met de elasticiteit van kinderlensen.<span class="ref" title="JCM 2025">[7]</span></p>
+
+        <div class="alert success">
+            <span class="material-icons">check_circle</span>
+            <span><strong>Nu beschikbaar:</strong> Dit is geen toekomstmuziek — femtoseconde laser wordt al gebruikt bij kinderen in gespecialiseerde centra.</span>
+        </div>
+
+        <div class="sources">
+            <h4>Bron</h4>
+            <ol>
+                <li>"Prospective Case Series of Low-Energy Femtosecond Laser-Assisted Cataract Surgery in Pediatric Patients." <em>J Clin Med</em> 14(7), 2138 (2025). <a href="https://www.mdpi.com/2077-0383/14/7/2138" target="_blank">MDPI</a></li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══ 7. AI DIAGNOSE ═══ -->
+    <h2 class="section-title">7. AI-diagnose (CC-Cruiser)</h2>
+    <p class="section-sub">Een computer die aangeboren staar sneller herkent dan een oogarts</p>
+
+    <div class="info-block">
+        <h2><span class="material-icons" style="color:var(--accent)">smart_toy</span> Wat is het?</h2>
+        <p>Chinese onderzoekers trainden een AI-systeem (<strong>CC-Cruiser</strong>) met honderden foto's van ogen met en zonder aangeboren staar. Het resultaat: de computer herkende <strong>alle gevallen</strong> van staar, terwijl oogartsen er enkele misten.<span class="ref" title="Nat Biomed Eng 2017">[8]</span></p>
+        <p>Een vervolgversie (<strong>CC-Guardian</strong>) kan ook het risico inschatten en behandeladvies geven via een smartphone-app.</p>
+
+        <h3>Waarom is dit belangrijk?</h3>
+        <p>In landen met weinig oogartsen kan AI helpen om staar <strong>eerder op te sporen</strong>. Hoe eerder het ontdekt wordt, hoe beter de prognose. Een eenvoudige foto met een telefoon kan genoeg zijn voor een eerste screening.</p>
+
+        <div class="sources">
+            <h4>Bronnen</h4>
+            <ol>
+                <li>Long E, et al. "An AI platform for the management of congenital cataracts." <em>Nat Biomed Eng</em> 1, 0024 (2017). <a href="https://www.nature.com/articles/s41551-016-0024" target="_blank">doi:10.1038/s41551-016-0024</a></li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══ 8. NAC DRUPPELS ═══ -->
+    <h2 class="section-title">8. NAC oogdruppels</h2>
+    <p class="section-sub">De populaire "Can-C" druppels — een eerlijke beoordeling</p>
+
+    <div class="info-block">
+        <h2><span class="material-icons" style="color:var(--red)">water_drop</span> Het eerlijke verhaal</h2>
+        <p>NAC-druppels (N-acetylcarnosine, niet te verwarren met het supplement NAC/N-acetylcysteine) worden online verkocht als "natuurlijke staar-oplossing". Ze bevatten een antioxidant die in theorie de lens kan beschermen.</p>
+
+        <h3>Wat zegt de wetenschap?</h3>
+        <p>De <strong>Cochrane Review</strong> (de gouden standaard voor medisch bewijs) oordeelde in 2017:<span class="ref" title="Cochrane 2017">[9]</span></p>
+        <ul>
+            <li>Er is <strong>geen overtuigend bewijs</strong> dat NAC-druppels staar voorkomen of genezen</li>
+            <li>Alle positieve studies komen van <strong>dezelfde Russische onderzoeksgroep</strong> die ook de druppels verkoopt</li>
+            <li>Kleine studies, hoge uitval, onvoldoende blindering</li>
+            <li>Geen onafhankelijke replicatie</li>
+        </ul>
+
+        <div class="alert danger">
+            <span class="material-icons">warning</span>
+            <span><strong>Wees kritisch.</strong> NAC-druppels worden niet aanbevolen door enige grote oogheelkundige organisatie. Ze zijn niet schadelijk, maar er is geen bewijs dat ze werken. Geef geen geld uit aan onbewezen producten.</span>
+        </div>
+
+        <div class="sources">
+            <h4>Bron</h4>
+            <ol>
+                <li>Dubois VD, Bastawrous A. "N-acetylcarnosine drops for age-related cataract." <em>Cochrane Database Syst Rev.</em> 2017. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6464029/" target="_blank">PMC6464029</a></li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══ GENETISCH ONDERZOEK ═══ -->
+    <h2 class="section-title">Hoe kom je achter de oorzaak van haar staar?</h2>
+    <p class="section-sub">Genetisch onderzoek kan in 90% van de gevallen de exacte oorzaak vinden</p>
+
+    <div class="info-block">
+        <h2><span class="material-icons" style="color:var(--teal)">biotech</span> Genetisch onderzoek (DNA-test)</h2>
+        <p>Bij bilaterale aangeboren staar kan met huidige DNA-technologie (<strong>whole exome sequencing</strong> of een <strong>oogheelkundig genpanel</strong>) in tot <strong>90% van de gevallen</strong> de exacte genetische mutatie gevonden worden.</p>
+
+        <h3>Waarom is dat belangrijk?</h3>
+        <ul>
+            <li><strong>Diagnose:</strong> je weet precies welk gen de staar veroorzaakt</li>
+            <li><strong>Prognose:</strong> sommige mutaties geven een hoger risico op glaucoom of andere oogproblemen</li>
+            <li><strong>Familieadvies:</strong> je weet of het erfelijk is en wat de kans is voor toekomstige kinderen</li>
+            <li><strong>Toekomstige behandeling:</strong> als CRISPR-therapie beschikbaar wordt, moet je weten welk gen gerepareerd moet worden</li>
+        </ul>
 
         <h3>Hoe werkt het?</h3>
-        <ul>
-            <li>Minimaal invasieve operatie die het lenskapsel intact laat</li>
-            <li>Lens epitheelcellen (LECs) — endogene stamcellen — worden gestimuleerd</li>
-            <li>Deze cellen groeien en vormen een nieuwe transparante lens</li>
-            <li>Binnen 1 maand heelt de kapsel-opening</li>
-            <li>Binnen 3 maanden vormt zich een lens met normale dikte</li>
-        </ul>
+        <ol style="padding-left:20px;margin:12px 0">
+            <li>Vraag een verwijzing aan je <strong>oogarts</strong> of <strong>huisarts</strong> voor klinisch genetisch onderzoek</li>
+            <li>Je gaat naar een <strong>klinisch geneticus</strong> (beschikbaar in alle UMC's)</li>
+            <li>Er wordt <strong>bloed afgenomen</strong> voor DNA-analyse</li>
+            <li>Na 6-12 weken krijg je de uitslag</li>
+            <li>De geneticus legt uit wat de mutatie betekent</li>
+        </ol>
 
-        <h3>Resultaten klinische trial (12 baby's)</h3>
+        <div class="alert success">
+            <span class="material-icons">check_circle</span>
+            <span><strong>Vergoed:</strong> Genetisch onderzoek voor aangeboren afwijkingen wordt vergoed door de basisverzekering. Je betaalt alleen het eigen risico (niet voor kinderen onder 18).</span>
+        </div>
+
+        <h3>Waar kan het?</h3>
         <table>
-            <tr><th></th><th>Nieuwe methode (12 baby's)</th><th>Standaard (25 baby's)</th></tr>
-            <tr><td>Ontsteking na operatie</td><td><span class="badge green">Lager</span></td><td><span class="badge red">Hoger</span></td></tr>
-            <tr><td>Verhoogde oogdruk</td><td><span class="badge green">Minder</span></td><td><span class="badge red">Meer</span></td></tr>
-            <tr><td>Nastaar (PCO)</td><td><span class="badge green">Minder</span></td><td><span class="badge red">Meer</span></td></tr>
-            <tr><td>Lens transparantie</td><td><span class="badge green">Transparant na 3 maanden</span></td><td>N.v.t. (kunstlens)</td></tr>
-        </table>
-
-        <h3>Nieuwste ontwikkeling: hESC lens-regeneratie</h3>
-        <p>Onderzoekers hebben ook menselijke embryonale stamcellen (hESC) gedifferentieerd tot lenscellen, gemengd met hyaluronaat, en geimplanteerd in het lenskapsel. Resultaat: <strong>85% van de normale lensdikte</strong>, biconvex, transparant, en dioptrie vergelijkbaar met het andere oog.</p>
-
-        <div class="sources">
-            <h4>Bronnen</h4>
-            <a href="https://today.ucsd.edu/story/stem_cells_regenerate_human_lens_after_cataract_surgery_restoring_vision" target="_blank">UC San Diego — Stem Cells Regenerate Human Lens</a>
-            <a href="https://www.nature.com/nature-index/article/10.1038/nature14650" target="_blank">Nature — Lens regeneration using endogenous stem cells</a>
-            <a href="https://www.sciencedirect.com/science/article/pii/S2589004223009987" target="_blank">ScienceDirect — Lens regeneration in situ using hESCs-derived cells</a>
-        </div>
-    </div>
-
-    <div class="info-block">
-        <h2><span class="material-icons">water_drop</span> Oogdruppels tegen cataract <span class="badge orange">Controversieel</span></h2>
-
-        <h3>Lanosterol</h3>
-        <p>In 2015 ontdekten Chinese onderzoekers dat kinderen met aangeboren cataract een mutatie hebben in het <strong>lanosterol synthase (LSS)</strong> gen. Lanosterol voorkomt normaal dat lens-eiwitten samenklonteren.</p>
-        <ul>
-            <li><strong>In vitro:</strong> Lanosterol loste eiwitklonteringen op in menselijke lenscellen</li>
-            <li><strong>Konijnen:</strong> 11 van 13 konijnen gingen van ernstig naar mild/geen cataract in 6 dagen</li>
-            <li><strong>Honden:</strong> Oogdruppels verminderden cataract bij honden significant</li>
-            <li><strong>Mensen:</strong> <span class="badge red">Teleurstellend</span> — 8 weken behandeling met 5mM lanosterol bij juveniele cataract gaf geen effect</li>
-        </ul>
-
-        <h3>VP1-001 (Compound 29)</h3>
-        <p>UCSF-onderzoekers ontwikkelden een meer oplosbare variant. In lab-tests stabiliseerde het crystalline-eiwitten, voorkwam amyloid-vorming, en loste bestaande amyloiden op.</p>
-
-        <h3>C-KAD</h3>
-        <p>Nieuwer compound in ontwikkeling. Behandelde ogen toonden beter zicht en contrast dan placebo. Het bedrijf heeft met de FDA overlegd over een grotere Fase 3 trial.</p>
-
-        <h3>Oxysterol Fase 3 trials (2025-2026)</h3>
-        <p>Volgens recente berichten zijn oxysterol-gebaseerde oogdruppels momenteel in <strong>Fase 3 klinische trials</strong>. Deze formulaties richten zich op het omkeren van cataractprogressie als niet-chirurgisch alternatief.</p>
-
-        <div class="sources">
-            <h4>Bronnen</h4>
-            <a href="https://www.aao.org/newsroom/news-releases/detail/dissolving-cataracts-with-eye-drops-instead-of-sur" target="_blank">AAO — Dissolving Cataracts with Eye Drops</a>
-            <a href="https://vitalibrary.com/oxysterol-eye-drops-cataract-reversal-phase-3/" target="_blank">VitaLibrary — Oxysterol Eye Drops Phase 3</a>
-            <a href="https://www.nature.com/articles/s41598-019-44676-4" target="_blank">Nature — Failure of Oxysterols to Restore Lens Clarity (tegenbewijs)</a>
-            <a href="https://www.frontiersin.org/journals/genetics/articles/10.3389/fgene.2024.1231521/full" target="_blank">Frontiers — Genetics of lanosterol and cataract (2024)</a>
-        </div>
-    </div>
-
-    <div class="info-block">
-        <h2><span class="material-icons">biotech</span> Genetische doorbraken</h2>
-
-        <h3>Next-generation sequencing (NGS)</h3>
-        <ul>
-            <li>100+ genen geassocieerd met aangeboren cataract geidentificeerd</li>
-            <li>Diagnostische opbrengst: <strong>40-60%</strong> (tot 75% bij families)</li>
-            <li>Whole exome sequencing (WES) ontdekte de LSS-mutatie</li>
-            <li>Maakt gerichte genetische counseling mogelijk</li>
-        </ul>
-
-        <h3>Belangrijkste genen</h3>
-        <table>
-            <tr><th>Gen</th><th>Eiwit</th><th>Type cataract</th></tr>
-            <tr><td>LSS</td><td>Lanosterol synthase</td><td>Autosomaal recessief congenitaal</td></tr>
-            <tr><td>CRYAA, CRYAB</td><td>Alpha-crystallines</td><td>Nucleair, corticaal</td></tr>
-            <tr><td>CRYBB1, CRYBB2</td><td>Beta-crystallines</td><td>Nucleair, lamellair</td></tr>
-            <tr><td>GJA3, GJA8</td><td>Connexines (gap junctions)</td><td>Nucleair pulverulent</td></tr>
-            <tr><td>MIP (AQP0)</td><td>Aquaporine 0</td><td>Lamellair</td></tr>
-            <tr><td>PAX6</td><td>Transcriptiefactor</td><td>Anterieur segment dysgenese</td></tr>
-        </table>
-
-        <div class="sources">
-            <h4>Bronnen</h4>
-            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10032449/" target="_blank">PMC — Congenital cataract: genetic and clinical management</a>
-            <a href="https://eyewiki.org/Cataracts_in_Children,_Congenital_and_Acquired" target="_blank">EyeWiki — Cataracts in Children</a>
-        </div>
-    </div>
-
-    <div class="info-block">
-        <h2><span class="material-icons">update</span> ASCRS 2025 — Chirurgische innovaties</h2>
-        <ul>
-            <li>Vergelijking standaard oogdruppels vs <strong>intracamerale injectie</strong> (DMK: dexamethason-moxifloxacine-ketorolac)</li>
-            <li>92% van patienten druppelt postoperatief verkeerd — intracamerale injectie elimineert dit probleem</li>
-            <li>Verbeterde IOL-designs met minder lichtverschijnselen</li>
-            <li>AI-gestuurde IOL-berekeningen voor nauwkeurigere lenskeuze</li>
-        </ul>
-
-        <div class="sources">
-            <h4>Bronnen</h4>
-            <a href="https://www.ophthalmologyadvisor.com/features/cataract-research-ascrs/" target="_blank">Ophthalmology Advisor — ASCRS 2025 Innovations</a>
-        </div>
-    </div>
-
-    <div class="info-block">
-        <h2><span class="material-icons">timeline</span> Tijdlijn onderzoek</h2>
-        <table>
-            <tr><th>Jaar</th><th>Ontwikkeling</th></tr>
-            <tr><td>2015</td><td>LSS-mutatie ontdekt; lanosterol lost cataract op bij dieren</td></tr>
-            <tr><td>2015</td><td>UCSF: compound 29 (VP1-001) geidentificeerd</td></tr>
-            <tr><td>2016</td><td>UC San Diego: stamcel lens-regeneratie bij 12 baby's</td></tr>
-            <tr><td>2019</td><td>Tegenbewijs: lanosterol faalt bij menselijke juveniele cataract</td></tr>
-            <tr><td>2023</td><td>hESC lens-regeneratie bereikt 85% van normale lensdikte</td></tr>
-            <tr><td>2024</td><td>Genetische studie: geen bewijs lanosterol-cataract associatie</td></tr>
-            <tr><td>2024-25</td><td>C-KAD: positieve resultaten, FDA-overleg voor Fase 3</td></tr>
-            <tr><td>2025</td><td>JAMA Review: comprehensive overzicht cataract</td></tr>
-            <tr><td>2025-26</td><td>Oxysterol oogdruppels in Fase 3 klinische trials</td></tr>
+            <tr><th>Centrum</th><th>Afdeling</th></tr>
+            <tr><td><strong>Erasmus MC Rotterdam</strong></td><td>Klinische Genetica + samenwerking Sophia kinderoogheelkunde</td></tr>
+            <tr><td><strong>Amsterdam UMC</strong></td><td>Klinische Genetica</td></tr>
+            <tr><td><strong>LUMC Leiden</strong></td><td>Klinische Genetica</td></tr>
+            <tr><td><strong>UMC Utrecht</strong></td><td>Klinische Genetica</td></tr>
+            <tr><td><strong>Radboudumc Nijmegen</strong></td><td>Klinische Genetica — expertisecentrum oogheelkundige genetica</td></tr>
         </table>
     </div>
 
 </div>
 
 <footer>
-    <p>catARACT &mdash; Informatief platform. Geen medisch advies. Raadpleeg altijd een oogarts.</p>
-    <p style="margin-top:8px">Gebouwd met <a href="https://claude.ai" target="_blank">Claude</a> | <a href="https://github.com/AnneVersion" target="_blank">Data Consultants</a></p>
+    <div class="disclaimer">
+        <strong>Disclaimer:</strong> Dit platform is informatief en vervangt geen medisch advies. Raadpleeg altijd een oogarts voor diagnose en behandeling.
+    </div>
+    <p>cat<span style="color:var(--teal)">ARACT</span> — Wetenschappelijk informatieplatform</p>
+    <p style="margin-top:4px">Gebouwd met <a href="https://claude.ai" target="_blank">Claude</a> | <a href="https://anneversion.github.io/dataconsultants" target="_blank">Data Consultants</a></p>
 </footer>
 
 </body>
