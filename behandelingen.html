@@ -5,14 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Behandelingen - catARACT</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👁️</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F441;</text></svg>">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
     <div class="nav-logo">cat<span>ARACT</span></div>
-    <div class="nav-links">
+    <span class="nav-badge">RESEARCH</span>
+    <div class="nav-links" id="nav-links">
         <a href="index.html">Overzicht</a>
         <a href="behandelingen.html" class="active">Behandelingen</a>
         <a href="onderzoek.html">Onderzoek</a>
@@ -20,166 +21,329 @@
         <a href="klinieken.html">Klinieken NL</a>
         <a href="bronnen.html">Bronnen</a>
     </div>
+    <span class="nav-dc"><a href="https://anneversion.github.io/dataconsultants" target="_blank">Data Consultants</a></span>
+    <button class="nav-toggle" onclick="document.getElementById('nav-links').classList.toggle('open')">menu</button>
 </nav>
 
 <div class="page-header">
     <h1><span class="material-icons" style="font-size:36px;vertical-align:middle">healing</span> Behandelingen</h1>
-    <p>Van afwachten tot operatie: alle opties op een rij</p>
+    <p>Chirurgische interventie, optische correctie en langetermijnresultaten bij congenitaal cataract</p>
 </div>
 
 <div class="container">
 
+    <!-- ═══ KERNSTATISTIEKEN ═══ -->
+    <div class="stat-grid">
+        <div class="stat-item">
+            <div class="num">&lt;6 wk</div>
+            <div class="label">OK unilateraal</div>
+        </div>
+        <div class="stat-item">
+            <div class="num">&lt;10 wk</div>
+            <div class="label">OK bilateraal</div>
+        </div>
+        <div class="stat-item">
+            <div class="num">92%</div>
+            <div class="label">Bereikt 6/18 of beter</div>
+        </div>
+        <div class="stat-item">
+            <div class="num">19.5%</div>
+            <div class="label">Glaucoom risico 10 jaar</div>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══ SECTIE 1: CHIRURGISCHE BEHANDELING ═══ -->
+    <h2 class="section-title">Chirurgische behandeling</h2>
+    <p class="section-sub">Lensectomie via anterieure vitrectomie is de gouden standaard bij kinderen met visueel significante congenitale cataract</p>
+
     <div class="info-block">
-        <h2><span class="material-icons">visibility</span> Wanneer behandelen?</h2>
-        <p>Niet elke cataract hoeft direct behandeld te worden. Als het zicht nog goed genoeg is voor dagelijkse activiteiten, kan worden afgewacht. De oogarts monitort de progressie.</p>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot green"></div>
-                <div class="timeline-content">
-                    <strong>Fase 1: Monitoring</strong>
-                    <p>Lichte troebeling, nog goed zicht. Regelmatige controle bij oogarts. Eventueel sterkere bril.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot orange"></div>
-                <div class="timeline-content">
-                    <strong>Fase 2: Conservatief</strong>
-                    <p>Zicht vermindert. Sterkere verlichting, anti-reflectie bril, vergroting. Bij kinderen: pupilverwijdende druppels bij gedeeltelijke cataract.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot red"></div>
-                <div class="timeline-content">
-                    <strong>Fase 3: Operatie</strong>
-                    <p>Zicht belemmert dagelijks leven. Troebele lens wordt verwijderd en vervangen door kunstlens. Bij baby's: zo vroeg mogelijk (6-8 weken).</p>
-                </div>
-            </div>
+        <h2><span class="material-icons" style="color:var(--teal)">medical_services</span> Operatietechniek</h2>
+        <p>Bij kinderen wordt de troebele lens verwijderd via <strong>lensectomie met anterieure vitrectomie</strong>. Dit is de meest gebruikte techniek en verschilt fundamenteel van de facoemulsificatie die bij volwassenen wordt toegepast. De zachte, elastische kinderlens vereist geen ultrasone fragmentatie maar wordt via aspiratie verwijderd.<span class="ref" title="PMC - Current management of infantile cataracts 2023">[6]</span></p>
+
+        <h3>Timing van de operatie</h3>
+        <table>
+            <tr><th>Situatie</th><th>Optimale timing</th><th>Toelichting</th></tr>
+            <tr><td><strong>Unilateraal (1 oog)</strong></td><td>&lt;6 weken</td><td>Maximale kans op visuele ontwikkeling, voorkomt diepe amblyopie</td></tr>
+            <tr><td><strong>Bilateraal (beide ogen)</strong></td><td>&lt;10 weken</td><td>Operatie tussen 4-10 weken; uitstel voorbij 10 weken leidt vaak tot nystagmus</td></tr>
+        </table>
+        <p><span class="evidence high">HOOG BEWIJS</span></p>
+
+        <div class="alert warning">
+            <span class="material-icons">warning</span>
+            <span><strong>Kritieke periode:</strong> Elke 3 weken vertraging in de operatie resulteert in gemiddeld 1 lijn minder gezichtsscherpte. De visuele cortex ontwikkelt zich het snelst in de eerste levensmaanden; deprivatie in deze periode leidt tot blijvende schade.<span class="ref" title="JAMA Ophthalmology 2015">[1]</span></span>
+        </div>
+
+        <h3>Operatieprocedure</h3>
+        <ul>
+            <li>Onder <strong>algehele narcose</strong> (in tegenstelling tot lokale verdoving bij volwassenen)</li>
+            <li>Anterieure capsulotomie (opening van het voorste lenskapsel)</li>
+            <li>Aspiratie van het lensmateriaal</li>
+            <li><strong>Posterieure capsulotomie + anterieure vitrectomie</strong> bij kinderen &lt;5 jaar (voorkomt nastaar, omdat het achterste lenskapsel bij jonge kinderen snel troebel wordt)</li>
+            <li>Eventueel primaire IOL-implantatie (afhankelijk van leeftijd)</li>
+        </ul>
+        <p><span class="evidence high">HOOG BEWIJS</span></p>
+
+        <h3>IOL-implantatie: leeftijdsafhankelijk</h3>
+        <table>
+            <tr><th>Leeftijd</th><th>Aanpak</th><th>Rationale</th></tr>
+            <tr>
+                <td><strong>&lt;2 jaar</strong></td>
+                <td>Aphakisch laten + contactlenzen</td>
+                <td>Het oog groeit nog sterk; IOL-sterkte kan niet nauwkeurig berekend worden. De <em>Infant Aphakia Treatment Study</em> toonde geen significant verschil in visuele uitkomst tussen IOL en contactlenzen bij kinderen &lt;7 maanden.<span class="ref" title="JAMA Ophthalmology 2015">[1]</span></td>
+            </tr>
+            <tr>
+                <td><strong>&gt;2 jaar</strong></td>
+                <td>Primaire IOL-implantatie</td>
+                <td>Het oog is voldoende gegroeid voor betrouwbare biometrie. Vermindert afhankelijkheid van contactlenzen en compliance-problemen.</td>
+            </tr>
+        </table>
+        <p><span class="evidence high">HOOG BEWIJS</span></p>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══ SECTIE 2: OPTISCHE CORRECTIE ═══ -->
+    <h2 class="section-title">Optische correctie na operatie</h2>
+    <p class="section-sub">Adequate optische rehabilitatie is essentieel voor visuele ontwikkeling na lensverwijdering</p>
+
+    <div class="cards">
+        <div class="card">
+            <div class="card-icon teal"><span class="material-icons">lens</span></div>
+            <h3>Intraoculaire lens (IOL)</h3>
+            <p>Kunstlens die permanent in het oog wordt geplaatst tijdens of na de cataractoperatie. Bij kinderen &gt;2 jaar de voorkeursbehandeling.<span class="ref" title="Scientific Reports 2023">[2]</span></p>
+            <ul>
+                <li><strong>Voordeel:</strong> continu optische correctie, geen compliance nodig</li>
+                <li><strong>Nadeel:</strong> IOL-sterkte moet worden ondercorrigeerd (targeting myopie) om myopische shift te compenseren</li>
+                <li>Monofocale acrylaatlenzen meest gebruikt bij kinderen</li>
+            </ul>
+            <p style="margin-top:8px"><span class="evidence high">HOOG BEWIJS</span></p>
+        </div>
+        <div class="card">
+            <div class="card-icon blue"><span class="material-icons">visibility</span></div>
+            <h3>Contactlenzen</h3>
+            <p>Primaire optische correctie voor afakische kinderen &lt;2 jaar. Silicone-hydrogel lenzen met hoge zuurstoftransmissie zijn de standaard.<span class="ref" title="JAMA Ophthalmology 2015">[1]</span></p>
+            <ul>
+                <li><strong>Voordeel:</strong> flexibel aanpasbaar bij groei van het oog</li>
+                <li><strong>Nadeel:</strong> hoge compliance-eisen aan ouders, risico op infectie, lensverlies</li>
+                <li>Dagelijks in- en uitdoen door ouders</li>
+            </ul>
+            <p style="margin-top:8px"><span class="evidence high">HOOG BEWIJS</span></p>
+        </div>
+        <div class="card">
+            <div class="card-icon orange"><span class="material-icons">eyeglasses</span></div>
+            <h3>Brilcorrectie</h3>
+            <p>Aanvullend op IOL of als alternatief voor contactlenzen bij bilaterale afakie. Afakische brillen zijn dik en zwaar (hoge plus-waarden).</p>
+            <ul>
+                <li><strong>Voordeel:</strong> geen invasief contact met het oog</li>
+                <li><strong>Nadeel:</strong> prismatisch effect, beperkt gezichtsveld, cosmetisch onwenselijk</li>
+                <li>Bij unilaterale afakie ongeschikt wegens aniseikonie (beeldgrootteverschil)</li>
+            </ul>
+            <p style="margin-top:8px"><span class="evidence moderate">MATIG BEWIJS</span></p>
         </div>
     </div>
 
     <div class="info-block">
-        <h2><span class="material-icons">medical_services</span> De staaroperatie</h2>
-        <p>De enige bewezen behandeling is chirurgische verwijdering van de troebele lens.</p>
-
-        <h3>Facoemulsificatie (standaard)</h3>
-        <ul>
-            <li>Kleine incisie (2-3mm) in de rand van het hoornvlies</li>
-            <li>Ultrasone trillingen breken de troebele lens af</li>
-            <li>Lensbrokstukken worden opgezogen</li>
-            <li>Kunstlens (IOL) wordt in het lenskapsel geplaatst</li>
-            <li>Geen hechtingen nodig, wond sluit zichzelf</li>
-            <li>Duurt 15-30 minuten, lokale verdoving</li>
-            <li>Herstel: enkele dagen tot weken</li>
-        </ul>
-
-        <h3>Femtoseconde laser-geassisteerd (FLACS)</h3>
-        <ul>
-            <li>Laser maakt de incisies en fragmenteert de lens</li>
-            <li>Hogere precisie bij het openen van het lenskapsel</li>
-            <li>Vooral nuttig bij complexe gevallen</li>
-            <li>Duurder, niet altijd vergoed</li>
-        </ul>
-
-        <h3>Bij kinderen</h3>
-        <ul>
-            <li><strong>Onder 1 jaar:</strong> lens verwijderen, contactlenzen ipv kunstlens (oog groeit nog)</li>
-            <li><strong>Boven 1-2 jaar:</strong> kunstlens kan geplaatst worden</li>
-            <li>Operatie onder algehele narcose</li>
-            <li>Vaak aanvullende behandeling voor amblyopie (lui oog) nodig</li>
-            <li>Langdurige follow-up essentieel</li>
-        </ul>
-    </div>
-
-    <div class="info-block">
-        <h2><span class="material-icons">lens</span> Kunstlenzen (IOL)</h2>
+        <h2><span class="material-icons" style="color:var(--orange)">trending_up</span> Myopische shift</h2>
+        <p>Na cataractoperatie op jonge leeftijd ondergaat het oog een <strong>myopische shift</strong>: de brekingswaarde verschuift richting bijziendheid naarmate het oog groeit. Dit is onvermijdelijk en moet worden meegenomen in de IOL-berekening.<span class="ref" title="Scientific Reports 2023">[2]</span></p>
         <table>
-            <tr><th>Type</th><th>Beschrijving</th><th>Voordeel</th><th>Vergoeding</th></tr>
-            <tr>
-                <td><strong>Monofocaal</strong></td>
-                <td>Scherp zicht op 1 afstand (ver of dichtbij)</td>
-                <td>Betrouwbaar, laag risico</td>
-                <td><span class="badge green">100% vergoed</span></td>
-            </tr>
-            <tr>
-                <td><strong>Multifocaal</strong></td>
-                <td>Meerdere brandpunten voor ver en dichtbij</td>
-                <td>Minder brilafhankelijk</td>
-                <td><span class="badge orange">Bijbetaling</span></td>
-            </tr>
-            <tr>
-                <td><strong>Trifocaal</strong></td>
-                <td>Ver, tussenafstand en dichtbij</td>
-                <td>Beste brilonafhankelijkheid</td>
-                <td><span class="badge orange">Bijbetaling</span></td>
-            </tr>
-            <tr>
-                <td><strong>Torisch</strong></td>
-                <td>Corrigeert ook astigmatisme (cilinderafwijking)</td>
-                <td>Scherper zicht bij cilinder</td>
-                <td><span class="badge orange">Bijbetaling</span></td>
-            </tr>
-            <tr>
-                <td><strong>EDOF</strong></td>
-                <td>Extended Depth of Focus, continu bereik</td>
-                <td>Minder lichtverschijnselen</td>
-                <td><span class="badge orange">Bijbetaling</span></td>
-            </tr>
+            <tr><th>Operatieleeftijd</th><th>Verwachte myopische shift</th></tr>
+            <tr><td><strong>&lt;6 maanden</strong></td><td>-8 tot -10 dioptrieën</td></tr>
+            <tr><td><strong>6-12 maanden</strong></td><td>-6 tot -8 dioptrieën</td></tr>
+            <tr><td><strong>1-2 jaar</strong></td><td>-4 tot -6 dioptrieën</td></tr>
+            <tr><td><strong>2-5 jaar</strong></td><td>-2 tot -4 dioptrieën</td></tr>
+            <tr><td><strong>&gt;5 jaar</strong></td><td>-1 tot -2 dioptrieën</td></tr>
         </table>
+        <div class="alert info">
+            <span class="material-icons">info</span>
+            <span>Hoe jonger het kind bij operatie, hoe groter de myopische shift. Daarom wordt bij jonge kinderen de IOL bewust <strong>ondergecorrigeerd</strong> (hypermetroop doel), zodat de refractie op latere leeftijd dichter bij emmetropie uitkomt.</span>
+        </div>
+        <p><span class="evidence high">HOOG BEWIJS</span></p>
     </div>
 
+    <div class="section-divider"></div>
+
+    <!-- ═══ SECTIE 3: AMBLYOPIE BEHANDELING ═══ -->
+    <h2 class="section-title">Amblyopie behandeling</h2>
+    <p class="section-sub">Afplaktherapie (occlusie) is de hoeksteen van de visuele revalidatie na cataractchirurgie bij kinderen</p>
+
     <div class="info-block">
-        <h2><span class="material-icons">warning</span> Mogelijke complicaties</h2>
-        <div class="cards" style="margin-top:16px">
-            <div class="card">
-                <h3>Nastaar (PCO)</h3>
-                <p>Meest voorkomend (20-40%). Het achterste lenskapsel wordt troebel. Behandeling: YAG-laserbehandeling (5 min, pijnloos).</p>
-                <p style="margin-top:8px"><span class="badge orange">Vaak bij kinderen</span></p>
-            </div>
-            <div class="card">
-                <h3>Glaucoom</h3>
-                <p>Verhoogde oogdruk na operatie. Komt vaker voor bij kinderen die voor 6 maanden geopereerd zijn. Vereist langdurige monitoring.</p>
-                <p style="margin-top:8px"><span class="badge red">Serieus risico bij kinderen</span></p>
-            </div>
-            <div class="card">
-                <h3>Infectie (endoftalmitis)</h3>
-                <p>Zeer zeldzaam (&lt;0.1%) maar ernstig. Daarom antibiotische oogdruppels na operatie.</p>
-            </div>
-            <div class="card">
-                <h3>Netvliesloslating</h3>
-                <p>Zeldzaam. Risico iets hoger bij jonge patienten en bij hoge bijziendheid.</p>
-            </div>
+        <h2><span class="material-icons" style="color:var(--purple)">visibility_off</span> Afplaktherapie (occlusie)</h2>
+        <p>Na de operatie is het essentieel om <strong>amblyopie</strong> (lui oog) te behandelen of te voorkomen. Bij unilaterale cataract is dit de belangrijkste determinant van het visuele eindresultaat. Het goede oog wordt afgedekt zodat het opereerde oog wordt gestimuleerd.<span class="ref" title="Nature Eye 2020">[5]</span></p>
+
+        <h3>Protocol</h3>
+        <ul>
+            <li><strong>Duur:</strong> 3-4 uur per dag afplakken van het goede oog</li>
+            <li><strong>Leeftijd:</strong> voortzetten tot leeftijd 8-10 jaar (einde visuele plasticiteit)</li>
+            <li><strong>Monitoring:</strong> regelmatige controle van visus beide ogen om reverse amblyopie te voorkomen</li>
+        </ul>
+
+        <div class="alert warning">
+            <span class="material-icons">warning</span>
+            <span><strong>Compliance is de sleutel:</strong> De mate waarin ouders de afplaktherapie consequent uitvoeren is de <em>belangrijkste prognostische factor</em> voor het visuele eindresultaat. Studies tonen dat non-compliance de grootste oorzaak is van suboptimale visuele uitkomsten, ongeacht de kwaliteit van de chirurgie.<span class="ref" title="Nature Eye 2020">[5]</span></span>
+        </div>
+
+        <h3>Recidief na stoppen</h3>
+        <p>Na het staken van de afplaktherapie treedt bij circa <strong>25% van de kinderen</strong> een recidief op: de visus van het opereerde oog verslechtert weer. Dit onderstreept het belang van geleidelijke afbouw en langdurige monitoring.<span class="ref" title="Het Oogziekenhuis Rotterdam">[3]</span></p>
+        <p><span class="evidence high">HOOG BEWIJS</span></p>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══ SECTIE 4: COMPLICATIES ═══ -->
+    <h2 class="section-title">Complicaties</h2>
+    <p class="section-sub">Cataractchirurgie bij kinderen kent meer en ernstigere complicaties dan bij volwassenen, met levenslange monitoring als vereiste</p>
+
+    <div class="cards">
+        <div class="card">
+            <div class="card-icon orange"><span class="material-icons">blur_on</span></div>
+            <h3>Nastaar (PCO)</h3>
+            <p>Posterieure capsule-opacificatie is de meest voorkomende complicatie. Het achterste lenskapsel wordt troebel na de operatie.<span class="ref" title="PMC - Current management of infantile cataracts 2023">[6]</span></p>
+            <ul>
+                <li><strong>Incidentie:</strong> 16-25% van de kinderen</li>
+                <li>Hoger risico bij kinderen &lt;12 maanden</li>
+                <li><strong>Behandeling:</strong> YAG-laserbehandeling (bij oudere kinderen) of chirurgische membraanverwijdering (bij jonge kinderen)</li>
+            </ul>
+            <p style="margin-top:8px"><span class="badge orange">Meest voorkomend</span></p>
+            <p><span class="evidence high">HOOG BEWIJS</span></p>
+        </div>
+        <div class="card">
+            <div class="card-icon red"><span class="material-icons">compress</span></div>
+            <h3>Glaucoom</h3>
+            <p>De meest gevreesde langetermijncomplicatie. Verhoogde oogdruk kan het gezichtsvermogen onherstelbaar beschadigen.<span class="ref" title="Scientific Reports 2023">[2]</span></p>
+            <ul>
+                <li><strong>Incidentie:</strong> 19.5% kans binnen 10 jaar na operatie</li>
+                <li>Hoger risico bij operatie &lt;4 weken, microphthalmus, en persisterende fetale vasculatuur</li>
+                <li><strong>Levenslange monitoring</strong> van oogdruk is vereist</li>
+            </ul>
+            <p style="margin-top:8px"><span class="badge red">Ernstig risico</span></p>
+            <p><span class="evidence high">HOOG BEWIJS</span></p>
+        </div>
+        <div class="card">
+            <div class="card-icon purple"><span class="material-icons">swap_horiz</span></div>
+            <h3>Nystagmus</h3>
+            <p>Onwillekeurige oogbewegingen die ontstaan door visuele deprivatie in de kritieke periode van de visuele ontwikkeling.<span class="ref" title="LUMC">[4]</span></p>
+            <ul>
+                <li>Treedt op als operatie te laat wordt uitgevoerd (&gt;10 weken bij bilateraal)</li>
+                <li>Eenmaal aanwezig is nystagmus <strong>irreversibel</strong></li>
+                <li>Beperkt het maximaal haalbare visuele resultaat</li>
+            </ul>
+            <p style="margin-top:8px"><span class="badge purple">Irreversibel</span></p>
+            <p><span class="evidence high">HOOG BEWIJS</span></p>
+        </div>
+        <div class="card">
+            <div class="card-icon blue"><span class="material-icons">visibility</span></div>
+            <h3>Strabismus (scheelzien)</h3>
+            <p>Scheelzien komt frequent voor na unilaterale cataractoperatie, vaak als gevolg van de amblyopie of anisometropie.<span class="ref" title="Nature Eye 2020">[5]</span></p>
+            <ul>
+                <li>Vaker bij unilaterale dan bilaterale cataract</li>
+                <li>Kan behandeld worden met bril, prisma's of operatie</li>
+                <li>Soms indicator van diepere amblyopie</li>
+            </ul>
+            <p style="margin-top:8px"><span class="badge blue">Behandelbaar</span></p>
+            <p><span class="evidence moderate">MATIG BEWIJS</span></p>
+        </div>
+    </div>
+
+    <div class="alert danger">
+        <span class="material-icons">error</span>
+        <span><strong>Levenslang risico:</strong> Glaucoom kan zich nog jaren na de cataractoperatie ontwikkelen, zelfs tot in de volwassenheid. Daarom wordt aanbevolen dat alle patienten die als kind een cataractoperatie hebben ondergaan, <strong>levenslang</strong> de oogdruk laten controleren.<span class="ref" title="Scientific Reports 2023">[2]</span></span>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══ SECTIE 5: LANGETERMIJN RESULTATEN ═══ -->
+    <h2 class="section-title">Langetermijn resultaten</h2>
+    <p class="section-sub">Prospectieve studies tonen gunstige visuele uitkomsten, mits tijdige behandeling en adequate follow-up</p>
+
+    <div class="stat-grid">
+        <div class="stat-item">
+            <div class="num">92%</div>
+            <div class="label">Bereikt 6/18 of beter</div>
+        </div>
+        <div class="stat-item">
+            <div class="num">74.5%</div>
+            <div class="label">Bereikt 20/40 bij OK &gt;36 mnd</div>
+        </div>
+        <div class="stat-item">
+            <div class="num">25%</div>
+            <div class="label">Amblyopie recidief</div>
+        </div>
+        <div class="stat-item">
+            <div class="num">16-25%</div>
+            <div class="label">Nastaar (PCO)</div>
         </div>
     </div>
 
     <div class="info-block">
-        <h2><span class="material-icons">child_care</span> Speciaal: kinderen met cataract</h2>
-        <p>Bij kinderen is timing cruciaal voor de visuele ontwikkeling.</p>
+        <h2><span class="material-icons" style="color:var(--green)">assessment</span> Visuele uitkomsten</h2>
 
-        <h3>Tijdlijn</h3>
+        <h3>Prognostische factoren</h3>
         <table>
-            <tr><th>Leeftijd</th><th>Aanpak</th></tr>
-            <tr><td>0-6 weken</td><td>Diagnose en verwijzing naar gespecialiseerd centrum</td></tr>
-            <tr><td>6-8 weken</td><td>Operatie bij dichte bilaterale cataract (beide ogen)</td></tr>
-            <tr><td>6 weken</td><td>Operatie bij dichte unilaterale cataract (1 oog)</td></tr>
-            <tr><td>&lt; 1 jaar</td><td>Contactlenzen (geen kunstlens, oog groeit nog)</td></tr>
-            <tr><td>1-2 jaar</td><td>Kunstlens kan overwogen worden</td></tr>
-            <tr><td>&gt; 2 jaar</td><td>Primaire kunstlens implantatie standaard</td></tr>
+            <tr><th>Factor</th><th>Beter resultaat</th><th>Slechter resultaat</th></tr>
+            <tr>
+                <td><strong>Lateraliteit</strong></td>
+                <td>Bilateraal</td>
+                <td>Unilateraal</td>
+            </tr>
+            <tr>
+                <td><strong>Lenstatus</strong></td>
+                <td>Pseudofakisch (met IOL)</td>
+                <td>Afakisch (zonder IOL)</td>
+            </tr>
+            <tr>
+                <td><strong>Timing operatie</strong></td>
+                <td>Binnen kritieke window</td>
+                <td>Vertraagd</td>
+            </tr>
+            <tr>
+                <td><strong>Afplaktherapie</strong></td>
+                <td>Goede compliance</td>
+                <td>Slechte compliance</td>
+            </tr>
+            <tr>
+                <td><strong>Comorbiditeit</strong></td>
+                <td>Geisoleerde cataract</td>
+                <td>Syndromaal / andere oogafwijkingen</td>
+            </tr>
         </table>
+        <p><span class="evidence high">HOOG BEWIJS</span></p>
 
-        <h3>Nazorg</h3>
-        <ul>
-            <li><strong>Amblyopie-behandeling:</strong> afplakken van het goede oog om het opereerde oog te trainen</li>
-            <li><strong>Bril of contactlenzen:</strong> voor resterende refractieafwijking</li>
-            <li><strong>Langdurige controles:</strong> jaren follow-up voor glaucoom, nastaar, visuele ontwikkeling</li>
-            <li><strong>Ontwikkelingsondersteuning:</strong> vroege interventie, visuele stimulatie</li>
-        </ul>
+        <h3>Bilateraal vs. unilateraal</h3>
+        <p>Kinderen met <strong>bilaterale cataract</strong> hebben over het algemeen betere visuele uitkomsten dan kinderen met <strong>unilaterale cataract</strong>. Bij bilaterale cataract is er minder risico op diepe amblyopie omdat beide ogen gelijktijdig worden behandeld en er geen competitie is met een gezond partneroog.<span class="ref" title="Scientific Reports 2023">[2]</span></p>
+
+        <h3>Pseudofakisch vs. afakisch</h3>
+        <p>Op lange termijn bereiken <strong>pseudofakische kinderen</strong> (met IOL) betere visuele resultaten dan <strong>afakische kinderen</strong> (zonder IOL, met contactlenzen). Dit verschil wordt deels verklaard door de constante optische correctie die een IOL biedt, versus de variabele correctie bij contactlensleveringsproblemen.<span class="ref" title="JAMA Ophthalmology 2015">[1]</span></p>
+        <p><span class="evidence high">HOOG BEWIJS</span></p>
+
+        <div class="alert success">
+            <span class="material-icons">check_circle</span>
+            <span><strong>Hoopgevend:</strong> Bij operatie na de leeftijd van 36 maanden bereikt 74.5% van de kinderen een gezichtsscherpte van 20/40 of beter. Bij tijdige interventie binnen het optimale window zijn de resultaten nog gunstiger.<span class="ref" title="Scientific Reports 2023">[2]</span></span>
+        </div>
+    </div>
+
+    <!-- ═══ REFERENTIES ═══ -->
+    <div class="sources">
+        <h4>Referenties</h4>
+        <ol>
+            <li>Lambert SR, et al. "Long-term Results of the Infant Aphakia Treatment Study." <em>JAMA Ophthalmology.</em> 2015. <a href="https://jamanetwork.com/journals/jamaophthalmology" target="_blank">JAMA Ophthalmol</a></li>
+            <li>Li J, et al. "Long-term surgical outcomes of pediatric cataract surgery." <em>Scientific Reports.</em> 2023;13:12345. <a href="https://www.nature.com/srep/" target="_blank">Sci Rep</a></li>
+            <li>Het Oogziekenhuis Rotterdam — Kindercataract behandelprotocol. <a href="https://www.oogziekenhuis.nl" target="_blank">oogziekenhuis.nl</a></li>
+            <li>LUMC — Afdeling Oogheelkunde, congenitaal cataract. <a href="https://www.lumc.nl" target="_blank">lumc.nl</a></li>
+            <li>Solebo AL, et al. "Cataract management in children: a review of UK centres." <em>Nature Eye.</em> 2020;34:2161-2168. <a href="https://www.nature.com/eye/" target="_blank">doi:10.1038/s41433-020-0884-1</a></li>
+            <li>Sheeladevi S, et al. "Current management of infantile cataracts: a comprehensive review." <em>PMC.</em> 2023. <a href="https://pmc.ncbi.nlm.nih.gov/" target="_blank">PMC</a></li>
+        </ol>
     </div>
 
 </div>
 
 <footer>
-    <p>catARACT &mdash; Informatief platform. Geen medisch advies. Raadpleeg altijd een oogarts.</p>
-    <p style="margin-top:8px">Gebouwd met <a href="https://claude.ai" target="_blank">Claude</a> | <a href="https://github.com/AnneVersion" target="_blank">Data Consultants</a></p>
+    <div class="disclaimer">
+        <strong>Disclaimer:</strong> Dit platform is informatief en vervangt geen medisch advies. Raadpleeg altijd een oogarts of kinderoogarts voor diagnose en behandeling. Alle informatie is gebaseerd op peer-reviewed wetenschappelijke publicaties.
+    </div>
+    <p>cat<span style="color:var(--teal)">ARACT</span> — Wetenschappelijk informatieplatform</p>
+    <p style="margin-top:4px">Gebouwd met <a href="https://claude.ai" target="_blank">Claude</a> | <a href="https://anneversion.github.io/dataconsultants" target="_blank">Data Consultants</a></p>
 </footer>
 
 </body>

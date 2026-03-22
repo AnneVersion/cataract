@@ -3,16 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bronnen - catARACT</title>
+<title>Bronnen & Referenties - catARACT</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👁️</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F441;</text></svg>">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
     <div class="nav-logo">cat<span>ARACT</span></div>
-    <div class="nav-links">
+    <span class="nav-badge">RESEARCH</span>
+    <div class="nav-links" id="nav-links">
         <a href="index.html">Overzicht</a>
         <a href="behandelingen.html">Behandelingen</a>
         <a href="onderzoek.html">Onderzoek</a>
@@ -20,95 +21,186 @@
         <a href="klinieken.html">Klinieken NL</a>
         <a href="bronnen.html" class="active">Bronnen</a>
     </div>
+    <span class="nav-dc"><a href="https://anneversion.github.io/dataconsultants" target="_blank">Data Consultants</a></span>
+    <button class="nav-toggle" onclick="document.getElementById('nav-links').classList.toggle('open')">menu</button>
 </nav>
 
 <div class="page-header">
-    <h1><span class="material-icons" style="font-size:36px;vertical-align:middle">menu_book</span> Bronnen & Referenties</h1>
-    <p>Alle wetenschappelijke bronnen en betrouwbare informatie</p>
+    <h1>Bronnen & Referenties</h1>
+    <p>Alle wetenschappelijke publicaties, databases en organisaties op een rijtje</p>
 </div>
 
 <div class="container">
 
+    <!-- Wereldwijd onderzoeksoverzicht -->
     <div class="info-block">
-        <h2><span class="material-icons">school</span> Wetenschappelijke publicaties</h2>
+        <h2><span class="material-icons" style="color:var(--teal)">public</span> Wereldwijd onderzoeksoverzicht</h2>
+        <p>Bibliometrische analyse van 1.427 publicaties over congenitaal cataract (1903-2021).<span class="ref" title="PMC9191315">[*]</span></p>
 
-        <h3>Overzichtsartikelen</h3>
-        <ul>
-            <li><a href="https://www.ncbi.nlm.nih.gov/books/NBK539699/" target="_blank">Cataract - StatPearls (NCBI Bookshelf)</a> — Compleet medisch overzicht</li>
-            <li><a href="https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/cataracts" target="_blank">Cataracts - National Eye Institute (NEI)</a> — Patienteninformatie</li>
-            <li><a href="https://www.ncbi.nlm.nih.gov/books/NBK572080/" target="_blank">Pediatric Cataract - StatPearls</a> — Specifiek over kinderen</li>
-            <li><a href="https://www.aao.org/education/disease-review/pediatric-cataracts-overview" target="_blank">Pediatric Cataracts Overview - AAO</a></li>
-        </ul>
+        <h3>Top-landen naar publicaties</h3>
+        <table>
+            <tr><th>#</th><th>Land</th><th>Publicaties</th><th>Belangrijkste instituten</th></tr>
+            <tr><td>1</td><td><strong>Verenigde Staten</strong></td><td>939</td><td>Wilmer Eye Institute (Johns Hopkins), Bascom Palmer, NEI</td></tr>
+            <tr><td>2</td><td><strong>China</strong></td><td>~450</td><td>Sun Yat-sen University (36 pub.), Fudan University</td></tr>
+            <tr><td>3</td><td><strong>Verenigd Koninkrijk</strong></td><td>~280</td><td>UCL Institute of Ophthalmology, Moorfields Eye Hospital</td></tr>
+            <tr><td>4</td><td><strong>India</strong></td><td>~220</td><td>AIIMS, L.V. Prasad Eye Institute</td></tr>
+            <tr><td>5</td><td><strong>Australie</strong></td><td>~120</td><td>Save Sight Institute, Centre for Eye Research</td></tr>
+        </table>
 
-        <h3>Aangeboren cataract</h3>
+        <h3>Meest actieve instituten</h3>
+        <div class="cards" style="margin-top:12px">
+            <div class="card">
+                <div class="card-icon teal"><span class="material-icons">school</span></div>
+                <h3>Sun Yat-sen University, China</h3>
+                <p>Meest actieve instituut ter wereld (36 publicaties). Zhongshan Ophthalmic Center — State Key Lab of Ophthalmology. Pionierswerk in <strong>stamcelregeneratie</strong> en epidemiologie.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon blue"><span class="material-icons">school</span></div>
+                <h3>UC San Diego, VS</h3>
+                <p>Kang Zhang's lab. Ontdekking van <strong>lanosterol</strong> als cataract-omkerend middel (Nature, 2015). Nu mRNA-gentherapie. Stamcel lens-regeneratie bij baby's.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon purple"><span class="material-icons">school</span></div>
+                <h3>Moorfields / UCL, VK</h3>
+                <p>Grootste oogziekenhuis van Europa. Genetisch cataract-panel (115+ genen). Longitudinale follow-up studies tot 35 jaar.</p>
+            </div>
+        </div>
+
+        <h3>Belangrijkste financierders</h3>
+        <table>
+            <tr><th>Organisatie</th><th>Land</th><th>Gefinancierde publicaties</th></tr>
+            <tr><td><strong>National Natural Science Foundation of China</strong></td><td>China</td><td>134</td></tr>
+            <tr><td><strong>National Eye Institute (NEI/NIH)</strong></td><td>VS</td><td>~100</td></tr>
+            <tr><td><strong>Wellcome Trust</strong></td><td>VK</td><td>~40</td></tr>
+        </table>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- Wetenschappelijke publicaties -->
+    <div class="info-block">
+        <h2><span class="material-icons" style="color:var(--accent)">menu_book</span> Wetenschappelijke publicaties</h2>
+
+        <h3>Overzichtsartikelen & Reviews</h3>
         <ul>
+            <li><a href="https://www.ncbi.nlm.nih.gov/books/NBK572080/" target="_blank">Pediatric Cataract — StatPearls (NCBI Bookshelf)</a></li>
             <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10032449/" target="_blank">Congenital cataract: a guide to genetic and clinical management (PMC, 2023)</a></li>
             <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7729375/" target="_blank">Recent developments in management of congenital cataract (PMC, 2020)</a></li>
-            <li><a href="https://eyewiki.org/Cataracts_in_Children,_Congenital_and_Acquired" target="_blank">Cataracts in Children - EyeWiki (AAO)</a></li>
+            <li><a href="https://www.aao.org/education/disease-review/pediatric-cataracts-overview" target="_blank">Pediatric Cataracts Overview — AAO</a></li>
+            <li><a href="https://eyewiki.org/Cataracts_in_Children,_Congenital_and_Acquired" target="_blank">Cataracts in Children — EyeWiki (AAO)</a></li>
             <li><a href="https://www.nature.com/articles/s41433-020-1115-6" target="_blank">Cataract management in children: review across UK centres (Nature Eye, 2020)</a></li>
             <li><a href="https://www.sciencedirect.com/science/article/pii/S2162098925000969" target="_blank">Update on pediatric cataract surgery (ScienceDirect, 2025)</a></li>
+            <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10199332/" target="_blank">Current management of infantile cataracts (PMC, 2023)</a></li>
         </ul>
 
-        <h3>Stamcel lens-regeneratie</h3>
+        <h3>Genetica</h3>
         <ul>
-            <li><a href="https://today.ucsd.edu/story/stem_cells_regenerate_human_lens_after_cataract_surgery_restoring_vision" target="_blank">Stem Cells Regenerate Human Lens After Cataract Surgery (UC San Diego, 2016)</a></li>
-            <li><a href="https://www.sciencedirect.com/science/article/pii/S2589004223009987" target="_blank">Lens regeneration in situ using hESCs-derived cells (ScienceDirect, 2023)</a></li>
-            <li><a href="https://www.rpbusa.org/rpb/news-and-publications/news/latest/stem-cells-regenerate-human-lens/" target="_blank">Research to Prevent Blindness — Stem Cell Breakthrough</a></li>
+            <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8595562/" target="_blank">Inherited Cataracts: Genetic Mechanisms and Pathways (PMC, 2021)</a></li>
+            <li><a href="https://www.erfelijkheid.nl/ziektes/aangeboren-staar" target="_blank">Aangeboren staar — Erfelijkheid.nl</a></li>
+            <li><a href="https://gene.vision/knowledge-base/congenital-cataract-for-doctors/" target="_blank">Congenital cataract for professionals — Gene Vision</a></li>
+            <li><a href="https://www.sciencedirect.com/science/article/pii/S2314808X18302422" target="_blank">Genetics of congenital cataract: diagnosis and therapeutics (ScienceDirect)</a></li>
         </ul>
 
-        <h3>Oogdruppels (lanosterol, oxysterolen)</h3>
+        <h3>Stamcelregeneratie</h3>
         <ul>
-            <li><a href="https://www.nature.com/nature-index/article/10.1038/nature14650" target="_blank">Lanosterol reverses protein aggregation in cataracts (Nature, 2015)</a></li>
-            <li><a href="https://www.ucsf.edu/news/2015/11/176886/eye-drops-could-clear-cataracts-using-newly-identified-chemical" target="_blank">Eye Drops Could Clear Up Cataracts (UCSF, 2015)</a></li>
-            <li><a href="https://www.nature.com/articles/s41598-019-44676-4" target="_blank">Failure of Oxysterols to Restore Lens Clarity (Nature Scientific Reports, 2019)</a></li>
-            <li><a href="https://www.frontiersin.org/journals/genetics/articles/10.3389/fgene.2024.1231521/full" target="_blank">Genetics of lanosterol and cataract (Frontiers, 2024)</a></li>
-            <li><a href="https://vitalibrary.com/oxysterol-eye-drops-cataract-reversal-phase-3/" target="_blank">Oxysterol Eye Drops Phase 3 (VitaLibrary, 2026)</a></li>
-            <li><a href="http://www.fortunejournals.com/articles/lanosterol-eye-drops-in-a-human-juvenile-nuclear-cataract.html" target="_blank">Lanosterol Eye Drops in Human Juvenile Nuclear Cataract</a></li>
+            <li><a href="https://today.ucsd.edu/story/stem_cells_regenerate_human_lens_after_cataract_surgery_restoring_vision" target="_blank">Stem Cells Regenerate Human Lens (UC San Diego, 2016)</a></li>
+            <li><a href="https://www.sciencedirect.com/science/article/pii/S2589004223009987" target="_blank">Lens regeneration using hESCs-derived cells (ScienceDirect, 2023)</a></li>
         </ul>
 
-        <h3>Voeding & supplementen</h3>
+        <h3>Lanosterol & Oogdruppels</h3>
+        <ul>
+            <li><a href="https://www.nature.com/articles/nature14650" target="_blank">Lanosterol reverses protein aggregation in cataracts (Nature, 2015)</a></li>
+            <li><a href="https://www.nature.com/articles/s41467-025-63553-5" target="_blank">mRNA-LNP encoding lanosterol synthase ameliorates cataract (Nature Communications, 2025)</a></li>
+            <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10910428/" target="_blank">Genetics of lanosterol and cataract — UK Biobank (Frontiers, 2024)</a></li>
+            <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11574704/" target="_blank">Research progress on antioxidants in cataract prevention (PMC, 2024)</a></li>
+        </ul>
+
+        <h3>Chirurgische resultaten</h3>
+        <ul>
+            <li><a href="https://jamanetwork.com/journals/jamaophthalmology/fullarticle/2341257" target="_blank">Long-term Results Pediatric Cataract Surgery (JAMA Ophthalmology, 2015)</a></li>
+            <li><a href="https://www.nature.com/articles/s41598-023-49166-2" target="_blank">Long-term surgical outcomes — multivariate analysis (Scientific Reports, 2023)</a></li>
+            <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3720778/" target="_blank">Long-Term Risk of Glaucoma after Congenital Cataract Surgery (PMC)</a></li>
+            <li><a href="https://onlinelibrary.wiley.com/doi/10.1111/aos.16636" target="_blank">Long-term risk of glaucoma — 35 year follow-up (Acta Ophthalmologica, 2024)</a></li>
+        </ul>
+
+        <h3>Voeding & Supplementen</h3>
         <ul>
             <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6774801/" target="_blank">Lutein/Zeaxanthin for Age-Related Cataract (PMC, 2019)</a></li>
-            <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6464029/" target="_blank">N-acetylcarnosine (NAC) drops for cataract — Cochrane Review (PMC, 2017)</a></li>
-            <li><a href="https://www.lifeextension.com/protocols/eye-ear/cataracts" target="_blank">Life Extension — Cataracts Protocol</a></li>
+            <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6464029/" target="_blank">NAC drops for cataract — Cochrane Review (PMC, 2017)</a></li>
         </ul>
 
-        <h3>Chirurgische innovaties</h3>
+        <h3>Bibliometrie</h3>
         <ul>
-            <li><a href="https://www.ophthalmologyadvisor.com/features/cataract-research-ascrs/" target="_blank">Cataract Research Innovations ASCRS 2025</a></li>
-            <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5426125/" target="_blank">Innovations in pediatric cataract surgery (PMC, 2017)</a></li>
-            <li><a href="https://www.aao.org/eyenet/article/cataract-innovations" target="_blank">Cataract Innovations - AAO</a></li>
+            <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9191315/" target="_blank">Mapping global research output in congenital cataracts 1903-2021 (PMC, 2022)</a></li>
+            <li><a href="https://www.sciencedirect.com/science/article/pii/S2405844023047989" target="_blank">Evolution and trends of childhood cataract research 2012-2021 (Heliyon, 2023)</a></li>
         </ul>
     </div>
 
+    <div class="section-divider"></div>
+
+    <!-- Nederlandse bronnen -->
     <div class="info-block">
-        <h2><span class="material-icons">local_hospital</span> Nederlandse bronnen</h2>
+        <h2><span class="material-icons" style="color:var(--green)">local_hospital</span> Nederlandse bronnen</h2>
         <ul>
             <li><a href="https://www.oogziekenhuis.nl/oogziekten-en-behandelingen/aangeboren-staar-congenitaal-cataract" target="_blank">Het Oogziekenhuis Rotterdam — Aangeboren staar</a></li>
             <li><a href="https://www.oogziekenhuis.nl/oogziekten-en-behandelingen/aangeboren-staar-bij-kinderen-behandeling" target="_blank">Het Oogziekenhuis Rotterdam — Behandeling bij kinderen</a></li>
             <li><a href="https://www.oogziekenhuis.nl/centrums/kinderoogcentrum" target="_blank">KinderOOGcentrum Rotterdam</a></li>
+            <li><a href="https://www.lumc.nl/afdelingen/oogheelkunde/ziektes-en-aandoeningen/staar-bij-kinderen/" target="_blank">LUMC — Staar bij kinderen</a></li>
+            <li><a href="https://www.erasmusmc.nl/nl-nl/sophia/patientenfolders/aangeboren-staar-congenitaal-cataract-fldr-5pi31582743792975r" target="_blank">Erasmus MC Sophia — Aangeboren staar</a></li>
             <li><a href="https://www.amsterdamumc.nl/nl/patienteninformatie/aangeboren-of-op-jonge-leeftijd-verworven-cataract-staar-1.htm" target="_blank">Amsterdam UMC — Cataract bij kinderen</a></li>
-            <li><a href="https://www.oogartsen.nl/ooglens-staar/staaroperatie-cataract/" target="_blank">Oogartsen.nl — Staaroperatie</a></li>
-            <li><a href="https://www.zorgkaartnederland.nl/oogarts/cataract-en-refractiechirurgie" target="_blank">ZorgkaartNederland — Oogartsen cataract</a></li>
-            <li><a href="https://oogfonds.nl/verhaal/stamceltherapie-gentherapie/" target="_blank">Oogfonds — Stamceltherapie & gentherapie</a></li>
+            <li><a href="https://www.zorgkaartnederland.nl/oogarts/kinderoogheelkunde" target="_blank">ZorgkaartNederland — 18 kinderoogartsen</a></li>
         </ul>
     </div>
 
+    <!-- Patientenorganisaties -->
     <div class="info-block">
-        <h2><span class="material-icons">groups</span> Patientenorganisaties</h2>
-        <ul>
-            <li><a href="https://oogfonds.nl/" target="_blank">Oogfonds</a> — Financiert oogonderzoek in Nederland</li>
-            <li><a href="https://www.oogvereniging.nl/" target="_blank">Oogvereniging</a> — Belangenorganisatie voor slechtzienden en blinden</li>
-            <li><a href="https://www.bartimeus.nl/" target="_blank">Bartiméus</a> — Expertise centrum voor blinden en slechtzienden</li>
-            <li><a href="https://www.visio.org/" target="_blank">Koninklijke Visio</a> — Revalidatie voor slechtzienden</li>
-        </ul>
+        <h2><span class="material-icons" style="color:var(--purple)">groups</span> Patientenorganisaties</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Oogfonds</h3>
+                <p>Financiert oogonderzoek in Nederland, waaronder stamcel- en gentherapie.</p>
+                <p><a href="https://oogfonds.nl/" target="_blank">oogfonds.nl</a></p>
+            </div>
+            <div class="card">
+                <h3>Oogvereniging</h3>
+                <p>Belangenorganisatie voor slechtzienden en blinden in Nederland.</p>
+                <p><a href="https://www.oogvereniging.nl/" target="_blank">oogvereniging.nl</a></p>
+            </div>
+            <div class="card">
+                <h3>Bartimeus</h3>
+                <p>Expertisecentrum voor blinden en slechtzienden, ook voor kinderen.</p>
+                <p><a href="https://www.bartimeus.nl/" target="_blank">bartimeus.nl</a></p>
+            </div>
+            <div class="card">
+                <h3>Koninklijke Visio</h3>
+                <p>Revalidatie voor slechtzienden. Hulp bij het omgaan met verminderd zicht.</p>
+                <p><a href="https://www.visio.org/" target="_blank">visio.org</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Belangrijke journals -->
+    <div class="info-block">
+        <h2><span class="material-icons" style="color:var(--orange)">auto_stories</span> Belangrijkste vakbladen</h2>
+        <table>
+            <tr><th>Tijdschrift</th><th>Impact Factor</th><th>Publicaties cataract</th></tr>
+            <tr><td><strong>Investigative Ophthalmology & Visual Science</strong></td><td>4.8</td><td>161</td></tr>
+            <tr><td><strong>J. AAPOS</strong> (Ped. Ophthalmology & Strabismus)</td><td>1.7</td><td>113</td></tr>
+            <tr><td><strong>Nature</strong></td><td>64.8</td><td>Lanosterol doorbraak (2015)</td></tr>
+            <tr><td><strong>Nature Communications</strong></td><td>16.6</td><td>mRNA-therapie (2025)</td></tr>
+            <tr><td><strong>JAMA Ophthalmology</strong></td><td>8.1</td><td>Langetermijn IOL resultaten</td></tr>
+            <tr><td><strong>The Lancet</strong></td><td>168.9</td><td>Globale prevalentie meta-analyse</td></tr>
+        </table>
     </div>
 
 </div>
 
 <footer>
-    <p>catARACT &mdash; Informatief platform. Geen medisch advies. Raadpleeg altijd een oogarts.</p>
-    <p style="margin-top:8px">Gebouwd met <a href="https://claude.ai" target="_blank">Claude</a> | <a href="https://github.com/AnneVersion" target="_blank">Data Consultants</a></p>
+    <div class="disclaimer">
+        <strong>Disclaimer:</strong> Dit platform is informatief en vervangt geen medisch advies. Raadpleeg altijd een oogarts voor diagnose en behandeling.
+    </div>
+    <p>cat<span style="color:var(--teal)">ARACT</span> — Wetenschappelijk informatieplatform</p>
+    <p style="margin-top:4px">Gebouwd met <a href="https://claude.ai" target="_blank">Claude</a> | <a href="https://anneversion.github.io/dataconsultants" target="_blank">Data Consultants</a></p>
 </footer>
 
 </body>

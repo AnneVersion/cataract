@@ -5,14 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Klinieken NL - catARACT</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👁️</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F441;</text></svg>">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
     <div class="nav-logo">cat<span>ARACT</span></div>
-    <div class="nav-links">
+    <span class="nav-badge">RESEARCH</span>
+    <div class="nav-links" id="nav-links">
         <a href="index.html">Overzicht</a>
         <a href="behandelingen.html">Behandelingen</a>
         <a href="onderzoek.html">Onderzoek</a>
@@ -20,141 +21,132 @@
         <a href="klinieken.html" class="active">Klinieken NL</a>
         <a href="bronnen.html">Bronnen</a>
     </div>
+    <span class="nav-dc"><a href="https://anneversion.github.io/dataconsultants" target="_blank">Data Consultants</a></span>
+    <button class="nav-toggle" onclick="document.getElementById('nav-links').classList.toggle('open')">menu</button>
 </nav>
 
 <div class="page-header">
-    <h1><span class="material-icons" style="font-size:36px;vertical-align:middle">local_hospital</span> Klinieken & Specialisten in Nederland</h1>
-    <p>De beste oogklinieken voor cataract, met speciale aandacht voor kinderen</p>
+    <h1><span class="material-icons" style="font-size:36px;vertical-align:middle">local_hospital</span> Gespecialiseerde Centra voor Aangeboren Staar</h1>
+    <p>Klinieken en specialisten in Nederland met expertise in congenitaal cataract bij kinderen</p>
 </div>
 
 <div class="container">
 
-    <div class="info-block" style="background: #d1fae5; border-color: #10b981;">
-        <h2 style="color: #065f46;"><span class="material-icons">star</span> Gespecialiseerd in kinderen</h2>
-        <p style="color: #065f46;">Voor kinderen met (aangeboren) cataract is gespecialiseerde zorg essentieel. Het KinderOOGcentrum in Het Oogziekenhuis Rotterdam is hierin uniek in Nederland.</p>
+    <div class="alert info">
+        <span class="material-icons">priority_high</span>
+        <span>Bij vermoeden van aangeboren staar: verwijs direct naar kinderoogarts. Elke week telt.</span>
     </div>
 
-    <div class="info-block">
-        <h2><span class="material-icons">local_hospital</span> Het Oogziekenhuis Rotterdam</h2>
-        <p><span class="badge green">Aanbevolen voor kinderen</span> <span class="badge blue">Wetenschappelijk onderzoek</span></p>
-
-        <h3>Cataractcentrum</h3>
-        <ul>
-            <li>Grootste expertise in Nederland op cataractgebied</li>
-            <li>Internationaal koploper in onderzoek</li>
-            <li>Onderzoek naar lange-termijn resultaten kunstlenzen bij kinderen</li>
-            <li>Uniek wetenschappelijk onderzoek, ook internationaal toonaangevend</li>
-        </ul>
-
-        <h3>KinderOOGcentrum</h3>
-        <ul>
-            <li>Uniek in Nederland: gespecialiseerd in kinderen 0-15 jaar</li>
-            <li>Behandeling van aangeboren cataract</li>
-            <li>Multidisciplinair team</li>
-            <li>Jarenlange follow-up</li>
-        </ul>
-
-        <p style="margin-top:12px">
-            <a href="https://www.oogziekenhuis.nl/centrums/cataractcentrum" target="_blank">Cataractcentrum &rarr;</a> |
-            <a href="https://www.oogziekenhuis.nl/centrums/kinderoogcentrum" target="_blank">KinderOOGcentrum &rarr;</a> |
-            <a href="https://www.oogziekenhuis.nl/oogziekten-en-behandelingen/aangeboren-staar-bij-kinderen-behandeling" target="_blank">Aangeboren staar behandeling &rarr;</a>
-        </p>
-    </div>
-
-    <div class="info-block">
-        <h2><span class="material-icons">local_hospital</span> Amsterdam UMC</h2>
-        <p><span class="badge blue">Academisch ziekenhuis</span></p>
-        <ul>
-            <li>Afdeling oogheelkunde met subspecialisatie kinderoogheelkunde</li>
-            <li>Behandeling aangeboren en verworven cataract op jonge leeftijd</li>
-            <li>Academische setting: toegang tot nieuwste behandelingen en trials</li>
-        </ul>
-        <p style="margin-top:12px">
-            <a href="https://www.amsterdamumc.nl/nl/patienteninformatie/aangeboren-of-op-jonge-leeftijd-verworven-cataract-staar-1.htm" target="_blank">Meer info &rarr;</a>
-        </p>
-    </div>
-
-    <div class="info-block">
-        <h2><span class="material-icons">local_hospital</span> Bergman Clinics | Ogen</h2>
-        <p><span class="badge purple">Focuskliniek</span></p>
-        <ul>
-            <li>Meerdere locaties door heel Nederland</li>
-            <li>Pilot bilaterale cataractoperatie (beide ogen tegelijk)</li>
-            <li>Korte wachttijden</li>
-            <li>Verwijzing nodig van huisarts of oogarts</li>
-        </ul>
-        <p style="margin-top:12px">
-            <a href="https://www.bergmanclinics.nl/ogen/staar/de-behandeling" target="_blank">Meer info &rarr;</a>
-        </p>
-    </div>
-
-    <div class="info-block">
-        <h2><span class="material-icons">local_hospital</span> Retina Total Eye Care</h2>
-        <p><span class="badge orange">Implantlens specialist</span></p>
-        <ul>
-            <li>Meeste expertise op gebied van implantlenzen</li>
-            <li>Directeur Dr. Jan Willem van der Linden gepromoveerd op multifocale implantlenzen</li>
-            <li>Multifocale, trifocale en pentafocale lenzen beschikbaar</li>
-            <li>Staar verhelpen + brilvrij in een operatie</li>
-        </ul>
-        <p style="margin-top:12px">
-            <a href="https://www.retina.nl/en/cataract-treatment/" target="_blank">Meer info &rarr;</a>
-        </p>
-    </div>
-
-    <div class="cards">
-        <div class="card">
-            <h3>Eyescan</h3>
-            <p>Standaard kunstlens 100% vergoed door zorgverzekering. Meerdere locaties.</p>
-            <p><a href="https://www.eyescan.nl/oogaandoeningen/staar-cataract/" target="_blank">eyescan.nl &rarr;</a></p>
-        </div>
-        <div class="card">
-            <h3>Xpert Clinics Oogzorg</h3>
-            <p>Voorheen Oogkliniek Heuvelrug. Breed palet oogzorg voor jong en oud, korte wachttijden.</p>
-            <p><a href="https://oogzorg.xpertclinics.nl/" target="_blank">xpertclinics.nl &rarr;</a></p>
-        </div>
-        <div class="card">
-            <h3>Dutch Clinic Hoofddorp</h3>
-            <p>40.000+ behandelingen, 25+ jaar ervaring. Aangesloten bij NOG en ESCRS.</p>
-            <p><a href="https://www.dutchclinic.com/" target="_blank">dutchclinic.com &rarr;</a></p>
+    <!-- KinderOOGcentrum Rotterdam -->
+    <div class="kliniek-card">
+        <div class="icon"><span class="material-icons">star</span></div>
+        <div>
+            <h3>KinderOOGcentrum &mdash; Het Oogziekenhuis Rotterdam</h3>
+            <p>Meest gespecialiseerd centrum voor congenitaal cataract in Nederland. Beschikt over de modernste operatietechnieken en voert wetenschappelijk onderzoek naar intraoculaire lenzen (IOL) bij kinderen. Uniek multidisciplinair kinderteam met jarenlange follow-up.</p>
+            <div class="meta">
+                <span><span class="material-icons">phone</span> 010-4017741</span>
+                <span><span class="material-icons">email</span> planningkinder@oogziekenhuis.nl</span>
+                <span><span class="material-icons">language</span> <a href="https://www.oogziekenhuis.nl" target="_blank">oogziekenhuis.nl</a></span>
+                <span><span class="material-icons">thumb_up</span> ZorgkaartNL: hoge waardering</span>
+            </div>
         </div>
     </div>
 
+    <!-- Erasmus MC Sophia -->
+    <div class="kliniek-card">
+        <div class="icon"><span class="material-icons">local_hospital</span></div>
+        <div>
+            <h3>Erasmus MC Sophia Kinderziekenhuis</h3>
+            <p>Kinderoogheelkunde afdeling met nauwe samenwerking met genetica, neurologie en plastische chirurgie. Academische setting voor complexe gevallen van aangeboren staar die multidisciplinaire aanpak vereisen.</p>
+            <div class="meta">
+                <span><span class="material-icons">language</span> <a href="https://www.erasmusmc.nl" target="_blank">erasmusmc.nl</a></span>
+                <span><span class="material-icons">science</span> Academisch ziekenhuis</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- LUMC Leiden -->
+    <div class="kliniek-card">
+        <div class="icon"><span class="material-icons">local_hospital</span></div>
+        <div>
+            <h3>LUMC Leiden</h3>
+            <p>Uitgebreide expertise op het gebied van staar bij kinderen. Bijzondere specialisatie in glaucoom-monitoring na cataractoperatie, een belangrijke complicatie die langdurige follow-up vereist.</p>
+            <div class="meta">
+                <span><span class="material-icons">language</span> <a href="https://www.lumc.nl" target="_blank">lumc.nl</a></span>
+                <span><span class="material-icons">visibility</span> Glaucoom-expertise post-cataract</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Amsterdam UMC -->
+    <div class="kliniek-card">
+        <div class="icon"><span class="material-icons">local_hospital</span></div>
+        <div>
+            <h3>Amsterdam UMC</h3>
+            <p>Behandeling van zowel aangeboren als op jonge leeftijd verworven cataract. Multidisciplinair team met toegang tot de nieuwste behandelingen en klinische trials in academische setting.</p>
+            <div class="meta">
+                <span><span class="material-icons">language</span> <a href="https://www.amsterdamumc.nl" target="_blank">amsterdamumc.nl</a></span>
+                <span><span class="material-icons">science</span> Academisch ziekenhuis</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- UMC Utrecht -->
+    <div class="kliniek-card">
+        <div class="icon"><span class="material-icons">local_hospital</span></div>
+        <div>
+            <h3>UMC Utrecht &mdash; Wilhelmina Kinderziekenhuis</h3>
+            <p>Afdeling kinderoogheelkunde gespecialiseerd in oogaandoeningen bij kinderen, waaronder aangeboren cataract. Onderdeel van het Wilhelmina Kinderziekenhuis met uitgebreide pediatrische faciliteiten.</p>
+            <div class="meta">
+                <span><span class="material-icons">language</span> <a href="https://www.umcutrecht.nl" target="_blank">umcutrecht.nl</a></span>
+                <span><span class="material-icons">child_care</span> Kinderziekenhuis</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Juliana Kinderziekenhuis -->
+    <div class="kliniek-card">
+        <div class="icon"><span class="material-icons">local_hospital</span></div>
+        <div>
+            <h3>Juliana Kinderziekenhuis Den Haag</h3>
+            <p>Team van 10 oogartsen met een gespecialiseerd kinderteam voor oogheelkundige behandelingen bij kinderen, waaronder diagnostiek en behandeling van aangeboren staar.</p>
+            <div class="meta">
+                <span><span class="material-icons">language</span> <a href="https://www.julianakinderziekenhuis.nl" target="_blank">julianakinderziekenhuis.nl</a></span>
+                <span><span class="material-icons">group</span> 10 oogartsen</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- Praktische informatie -->
+    <h2 class="section-title">Praktische informatie</h2>
+    <p class="section-sub">Zoeken, vergoeding en verwijzing</p>
+
     <div class="info-block">
-        <h2><span class="material-icons">search</span> Zelf zoeken</h2>
-        <table>
-            <tr><th>Platform</th><th>Wat</th><th>Link</th></tr>
-            <tr>
-                <td>ZorgkaartNederland</td>
-                <td>18 oogartsen met specialisatie cataract- en refractiechirurgie, gem. score 8.9</td>
-                <td><a href="https://www.zorgkaartnederland.nl/oogarts/cataract-en-refractiechirurgie" target="_blank">Bekijk &rarr;</a></td>
-            </tr>
-            <tr>
-                <td>Oogartsen.nl</td>
-                <td>Uitgebreide informatie over staaroperaties en kunstlenzen</td>
-                <td><a href="https://www.oogartsen.nl/ooglens-staar/staaroperatie-cataract/" target="_blank">Bekijk &rarr;</a></td>
-            </tr>
-        </table>
+        <h2><span class="material-icons">search</span> ZorgkaartNederland</h2>
+        <p>Op ZorgkaartNederland staan <strong>18 kinderoogartsen</strong> geregistreerd met een gemiddelde beoordeling van <strong>9.2</strong>. Patienten en ouders kunnen hier ervaringen lezen en vergelijken voordat zij een kliniek kiezen.</p>
+        <p><a href="https://www.zorgkaartnederland.nl" target="_blank">Bekijk beoordelingen op ZorgkaartNederland &rarr;</a></p>
     </div>
 
     <div class="info-block">
-        <h2><span class="material-icons">science</span> Onderzoekscentra (stamcellen & regeneratie)</h2>
-        <ul>
-            <li><strong>LUMC (Leiden):</strong> reNEW consortium, tientallen miljoenen voor stamcelonderzoek en regeneratieve geneeskunde</li>
-            <li><strong>UMC Utrecht:</strong> Centrum voor Regeneratieve Geneeskunde en Stamcellen</li>
-            <li><strong>Oogfonds:</strong> financiert onderzoek naar stamceltherapie en gentherapie voor oogziekten</li>
-        </ul>
-        <p style="margin-top:12px">
-            <a href="https://www.umcutrecht.nl/nl/centrum/centrum-voor-regeneratieve-geneeskunde-en-stamcellen" target="_blank">UMC Utrecht Stamcellen &rarr;</a> |
-            <a href="https://oogfonds.nl/verhaal/stamceltherapie-gentherapie/" target="_blank">Oogfonds &rarr;</a>
-        </p>
+        <h2><span class="material-icons">euro</span> Vergoeding</h2>
+        <p>Oogheelkundige behandeling voor kinderen onder de 18 jaar wordt <strong>volledig vergoed</strong> vanuit de basisverzekering. Er geldt <strong>geen eigen risico</strong> voor minderjarigen. Dit omvat de cataractoperatie, controles, eventuele lenscorrectie en bijbehorende nabehandeling.</p>
+    </div>
+
+    <div class="info-block">
+        <h2><span class="material-icons">assignment_ind</span> Verwijzing</h2>
+        <p>Een verwijzing naar een kinderoogarts kan via de <strong>huisarts</strong> of via de <strong>kinderarts</strong>. Bij vermoeden van aangeboren staar (witte pupilreflex, scheelzien, afwijkend kijkgedrag) is directe verwijzing naar een gespecialiseerd centrum aangewezen.</p>
     </div>
 
 </div>
 
 <footer>
-    <p>catARACT &mdash; Informatief platform. Geen medisch advies. Raadpleeg altijd een oogarts.</p>
-    <p style="margin-top:8px">Gebouwd met <a href="https://claude.ai" target="_blank">Claude</a> | <a href="https://github.com/AnneVersion" target="_blank">Data Consultants</a></p>
+    <div class="disclaimer">
+        <strong>Disclaimer:</strong> Dit platform is informatief en vervangt geen medisch advies. Raadpleeg altijd een oogarts of kinderoogarts voor diagnose en behandeling. Alle informatie is gebaseerd op peer-reviewed wetenschappelijke publicaties.
+    </div>
+    <p>cat<span style="color:var(--teal)">ARACT</span> &mdash; Wetenschappelijk informatieplatform</p>
+    <p style="margin-top:4px">Gebouwd met <a href="https://claude.ai" target="_blank">Claude</a> | <a href="https://anneversion.github.io/dataconsultants" target="_blank">Data Consultants</a></p>
 </footer>
 
 </body>

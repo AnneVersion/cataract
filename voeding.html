@@ -5,14 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Voeding & Preventie - catARACT</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👁️</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F441;</text></svg>">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
     <div class="nav-logo">cat<span>ARACT</span></div>
-    <div class="nav-links">
+    <span class="nav-badge">RESEARCH</span>
+    <div class="nav-links" id="nav-links">
         <a href="index.html">Overzicht</a>
         <a href="behandelingen.html">Behandelingen</a>
         <a href="onderzoek.html">Onderzoek</a>
@@ -20,183 +21,214 @@
         <a href="klinieken.html">Klinieken NL</a>
         <a href="bronnen.html">Bronnen</a>
     </div>
+    <span class="nav-dc"><a href="https://anneversion.github.io/dataconsultants" target="_blank">Data Consultants</a></span>
+    <button class="nav-toggle" onclick="document.getElementById('nav-links').classList.toggle('open')">menu</button>
 </nav>
 
 <div class="page-header">
-    <h1><span class="material-icons" style="font-size:36px;vertical-align:middle">restaurant</span> Voeding & Preventie</h1>
-    <p>Wat kan helpen om cataract te vertragen of voorkomen</p>
+    <h1>Voeding & Preventie</h1>
+    <p>Wetenschappelijk bewijs voor voedingsstoffen, supplementen en leefstijl bij cataract</p>
 </div>
 
 <div class="container">
 
-    <div class="info-block" style="background: #fef3c7; border-color: #f59e0b;">
-        <h2 style="color: #92400e;"><span class="material-icons">info</span> Belangrijk</h2>
-        <p style="color: #92400e;">Voeding en supplementen kunnen cataract <strong>niet genezen</strong>. Ze kunnen wel helpen bij het <strong>vertragen van progressie</strong> en het <strong>beschermen van de ogen</strong>. Overleg altijd met je oogarts voordat je supplementen neemt.</p>
+    <div class="alert warning">
+        <span class="material-icons">info</span>
+        <span><strong>Belangrijk:</strong> Voeding en supplementen kunnen aangeboren cataract <strong>niet genezen</strong>. Ze kunnen wel helpen bij het vertragen van progressie en het beschermen van de ogen na een operatie. Overleg altijd met een oogarts voordat je supplementen gebruikt, vooral bij kinderen.</span>
     </div>
 
     <h2 class="section-title">Beschermende voedingsstoffen</h2>
-    <p class="section-sub">Oxidatieve stress is een belangrijke factor bij cataractvorming. Antioxidanten kunnen helpen.</p>
+    <p class="section-sub">Oxidatieve stress speelt een rol bij cataractvorming. Antioxidanten kunnen lenseiwitten beschermen tegen aggregatie.</p>
 
     <div class="cards">
         <div class="card">
             <div class="card-icon orange"><span class="material-icons">visibility</span></div>
             <h3>Luteine & Zeaxanthine</h3>
-            <p><strong>Sterkste bewijs.</strong> Vrouwen met de hoogste inname hadden 32% minder kans op nucleaire cataract.</p>
+            <p><strong>Sterkste epidemiologisch bewijs.</strong> Meta-analyse: hoogste inname geassocieerd met 32% lager risico op nucleaire cataract.<span class="ref" title="AREDS2">[1]</span></p>
             <ul>
-                <li>Absorberen UV-licht in de lens</li>
-                <li>Beschermen tegen oxidatieve schade</li>
+                <li>Absorberen UV-licht en blauw licht in de lens</li>
+                <li>Beschermen tegen oxidatieve schade aan crystallinen</li>
                 <li><strong>Bronnen:</strong> spinazie, boerenkool, broccoli, eieren, mais</li>
-                <li><strong>Dosering:</strong> 10-20mg luteine/dag</li>
+                <li><strong>Dosering:</strong> 10-20 mg luteine/dag</li>
             </ul>
-            <p style="margin-top:8px"><span class="badge green">Sterk epidemiologisch bewijs</span></p>
+            <p style="margin-top:8px"><span class="evidence high">STERK BEWIJS</span></p>
         </div>
         <div class="card">
             <div class="card-icon blue"><span class="material-icons">water_drop</span></div>
-            <h3>Vitamine C</h3>
-            <p>Krachtige antioxidant die in hoge concentraties voorkomt in het oogvocht.</p>
+            <h3>Vitamine C (ascorbinezuur)</h3>
+            <p>Krachtige antioxidant die in hoge concentraties voorkomt in het oogvocht — 20-70x hoger dan in plasma.<span class="ref" title="Review Antioxidants">[2]</span></p>
             <ul>
-                <li>Beschermt lens-eiwitten tegen oxidatie</li>
+                <li>Beschermt crystalline-eiwitten tegen oxidatie</li>
                 <li>Regenereert vitamine E</li>
                 <li><strong>Bronnen:</strong> citrusvruchten, paprika, kiwi, aardbeien</li>
-                <li><strong>Dosering:</strong> 250-500mg/dag</li>
+                <li><strong>Dosering:</strong> 250-500 mg/dag</li>
             </ul>
+            <p style="margin-top:8px"><span class="evidence moderate">MATIG BEWIJS</span></p>
         </div>
         <div class="card">
             <div class="card-icon green"><span class="material-icons">eco</span></div>
-            <h3>Vitamine E</h3>
-            <p>Vetoplosbare antioxidant die celmembranen beschermt.</p>
+            <h3>Vitamine E (tocoferol)</h3>
+            <p>Vetoplosbare antioxidant die celmembranen van lensepitheel beschermt.</p>
             <ul>
                 <li>Beschermt tegen lipide-peroxidatie in de lens</li>
                 <li><strong>Bronnen:</strong> noten, zaden, zonnebloemolie, amandelen</li>
                 <li><strong>Dosering:</strong> 400 IU/dag</li>
             </ul>
+            <p style="margin-top:8px"><span class="evidence moderate">MATIG BEWIJS</span></p>
         </div>
         <div class="card">
             <div class="card-icon purple"><span class="material-icons">shield</span></div>
-            <h3>Glutathion</h3>
-            <p>Het belangrijkste antioxidant in de ooglens. Vermindert bij cataract.</p>
+            <h3>Glutathion (GSH)</h3>
+            <p>Het <strong>belangrijkste endogene antioxidant</strong> in de ooglens. Niveaus dalen significant bij cataract.</p>
             <ul>
-                <li>Lichaam maakt het zelf aan uit zwavelhoudende aminozuren</li>
-                <li>Directe supplementatie slecht opneembaar</li>
-                <li><strong>Verhoog via:</strong> N-acetylcysteine (NAC), alpha-liponzuur</li>
-                <li><strong>Voedsel:</strong> ui, knoflook, sjalot, kappertjes, avocado</li>
+                <li>Lichaam produceert het uit cysteine, glutaminezuur en glycine</li>
+                <li>Directe orale supplementatie slecht opneembaar</li>
+                <li><strong>Verhoog indirect via:</strong> N-acetylcysteine (NAC), alpha-liponzuur</li>
+                <li><strong>Voedsel:</strong> ui, knoflook, sjalot, avocado, asperge</li>
             </ul>
+            <p style="margin-top:8px"><span class="evidence moderate">MATIG BEWIJS</span></p>
         </div>
         <div class="card">
             <div class="card-icon red"><span class="material-icons">local_fire_department</span></div>
             <h3>Alpha-liponzuur (ALA)</h3>
-            <p>Recyclet andere antioxidanten (vitamine C, E, glutathion).</p>
+            <p>Uniek: recyclet andere antioxidanten (vitamine C, E, glutathion) en is zowel vet- als wateroplosbaar.</p>
             <ul>
-                <li>Zowel vet- als wateroplosbaar</li>
-                <li><strong>Dosering:</strong> 250mg 2x per dag</li>
+                <li>Kan de bloed-oogbarriere passeren</li>
+                <li>Beschermt tegen glycatie van lenseiwitten</li>
+                <li><strong>Dosering:</strong> 250 mg 2x per dag</li>
             </ul>
+            <p style="margin-top:8px"><span class="evidence emerging">OPKOMEND BEWIJS</span></p>
         </div>
         <div class="card">
-            <div class="card-icon blue"><span class="material-icons">science</span></div>
+            <div class="card-icon blue"><span class="material-icons">set_meal</span></div>
             <h3>Omega-3 vetzuren</h3>
-            <p>Anti-inflammatoire werking, beschermt oogweefsels.</p>
+            <p>Anti-inflammatoire werking, beschermt oogweefsels tegen chronische ontsteking.</p>
             <ul>
+                <li>DHA is structureel component van het netvlies</li>
                 <li><strong>Bronnen:</strong> vette vis (zalm, makreel, sardines), lijnzaad, walnoten</li>
-                <li><strong>Dosering:</strong> 1-2g EPA+DHA/dag</li>
+                <li><strong>Dosering:</strong> 1-2 g EPA+DHA/dag</li>
+            </ul>
+            <p style="margin-top:8px"><span class="evidence moderate">MATIG BEWIJS</span></p>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- NAC Oogdruppels -->
+    <div class="info-block">
+        <h2><span class="material-icons" style="color:var(--accent)">water_drop</span> NAC-oogdruppels (N-Acetylcarnosine)</h2>
+        <p>Niet te verwarren met N-acetylcysteine (oraal supplement). NAC-oogdruppels bevatten <strong>N-acetylcarnosine</strong>, dat het hoornvlies passeert en in het oog wordt omgezet in L-carnosine — een biologisch antioxidant dat glycatie van lenseiwitten kan remmen.</p>
+
+        <h3>Wetenschappelijk bewijs</h3>
+        <table>
+            <tr><th>Bron</th><th>Type</th><th>Conclusie</th></tr>
+            <tr>
+                <td>Babizhayev et al. (2009)</td>
+                <td>RCT</td>
+                <td><span class="badge green">Positief</span> — verbetering lenstransparantie en gezichtsscherpte na 6 maanden</td>
+            </tr>
+            <tr>
+                <td>Cochrane Systematic Review (2017)</td>
+                <td>Systematische review</td>
+                <td><span class="badge red">Onvoldoende bewijs</span> — alle positieve studies van dezelfde onderzoeksgroep, geen onafhankelijke replicatie<span class="ref" title="Cochrane">[3]</span></td>
+            </tr>
+        </table>
+
+        <div class="alert warning" style="margin-top:16px">
+            <span class="material-icons">warning</span>
+            <span><strong>Beperkingen:</strong> Er is geen onafhankelijk gerepliseerd bewijs voor NAC-oogdruppels. De Cochrane Review concludeert dat de kwaliteit van beschikbare studies onvoldoende is. Gebruik alleen in overleg met een oogarts.</span>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- Leefstijl -->
+    <h2 class="section-title">Leefstijl & Preventie</h2>
+    <p class="section-sub">Factoren die het risico op cataract(-progressie) beinvloeden</p>
+
+    <div class="cards">
+        <div class="card">
+            <div class="card-icon orange"><span class="material-icons">wb_sunny</span></div>
+            <h3>UV-bescherming</h3>
+            <ul>
+                <li>Draag <strong>altijd</strong> zonnebril met UV400 filter</li>
+                <li>Kies wraparound model voor zijbescherming</li>
+                <li>UV gaat door wolken — ook op bewolkte dagen</li>
+                <li>Kinderen: extra kwetsbaar, start zo vroeg mogelijk</li>
+            </ul>
+            <p style="margin-top:8px"><span class="evidence high">STERK BEWIJS</span></p>
+        </div>
+        <div class="card">
+            <div class="card-icon red"><span class="material-icons">smoke_free</span></div>
+            <h3>Niet roken</h3>
+            <ul>
+                <li>Roken <strong>verdubbelt</strong> het risico op cataract</li>
+                <li>Stoppen vermindert het risico geleidelijk over jaren</li>
+                <li>Passief roken is ook schadelijk voor de ogen</li>
+                <li>Mechanisme: verhoogde oxidatieve stress + toxinen</li>
+            </ul>
+            <p style="margin-top:8px"><span class="evidence high">STERK BEWIJS</span></p>
+        </div>
+        <div class="card">
+            <div class="card-icon blue"><span class="material-icons">monitor_heart</span></div>
+            <h3>Bloedsuiker controleren</h3>
+            <ul>
+                <li>Diabetes is een grote risicofactor (sorbitol-pathway)</li>
+                <li>Goede HbA1c-controle vertraagt cataract</li>
+                <li>Jaarlijkse oogcontrole bij diabetes verplicht</li>
+            </ul>
+            <p style="margin-top:8px"><span class="evidence high">STERK BEWIJS</span></p>
+        </div>
+        <div class="card">
+            <div class="card-icon teal"><span class="material-icons">visibility</span></div>
+            <h3>Regelmatige oogcontrole</h3>
+            <ul>
+                <li>Kinderen: rode reflex test bij consultatiebureau</li>
+                <li>Na cataract-operatie: <strong>levenslang</strong> controle (glaucoom)</li>
+                <li>Vanaf 40 jaar: elke 2-3 jaar naar oogarts</li>
+                <li>Bij risicofactoren: jaarlijks</li>
             </ul>
         </div>
     </div>
 
-    <div class="info-block">
-        <h2><span class="material-icons">water_drop</span> NAC-oogdruppels (N-Acetylcarnosine)</h2>
-        <p>Niet te verwarren met N-acetylcysteine (supplement). NAC-oogdruppels bevatten N-acetylcarnosine, dat het hoornvlies kan passeren en in het oog wordt omgezet in L-carnosine — een antioxidant.</p>
+    <div class="section-divider"></div>
 
-        <h3>Wat zegt de wetenschap?</h3>
+    <!-- Oog-vriendelijk dieet -->
+    <div class="info-block">
+        <h2><span class="material-icons" style="color:var(--green)">restaurant_menu</span> Oog-vriendelijk dieet</h2>
         <table>
-            <tr><th>Bron</th><th>Conclusie</th></tr>
-            <tr>
-                <td>Russische/Amerikaanse studies (Babizhayev)</td>
-                <td><span class="badge green">Positief</span> — verbetering van lenstransparantie en gezichtsscherpte</td>
-            </tr>
-            <tr>
-                <td>Cochrane Review (2017)</td>
-                <td><span class="badge red">Onvoldoende bewijs</span> — studies waren van dezelfde onderzoeksgroep, geen onafhankelijke replicatie</td>
-            </tr>
-        </table>
-
-        <h3>Bekende producten</h3>
-        <ul>
-            <li><strong>Can-C:</strong> 1% N-acetylcarnosine oogdruppels (beschikbaar zonder recept)</li>
-            <li><strong>NAC Drops:</strong> bioactieve anti-aging oogdruppels</li>
-        </ul>
-
-        <p style="margin-top:12px;color:var(--red);font-weight:600;"><span class="material-icons" style="font-size:16px;vertical-align:middle">warning</span> Let op: niet combineren met luteine/zeaxanthine supplementen volgens sommige fabrikanten.</p>
-
-        <div class="sources">
-            <h4>Bronnen</h4>
-            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6464029/" target="_blank">PMC — N-acetylcarnosine (NAC) drops for age-related cataract (Cochrane Review)</a>
-            <a href="https://www.can-c.net/" target="_blank">Can-C officieel</a>
-        </div>
-    </div>
-
-    <div class="info-block">
-        <h2><span class="material-icons">wb_sunny</span> Leefstijl & Preventie</h2>
-
-        <div class="cards" style="margin-top:16px">
-            <div class="card">
-                <h3>UV-bescherming</h3>
-                <ul>
-                    <li>Draag <strong>altijd</strong> een zonnebril met UV400 filter</li>
-                    <li>Kies wraparound model voor zijbescherming</li>
-                    <li>Ook op bewolkte dagen: UV gaat door wolken</li>
-                    <li>Kinderen: extra kwetsbaar, start vroeg</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Niet roken</h3>
-                <ul>
-                    <li>Roken verdubbelt het risico op cataract</li>
-                    <li>Stoppen vermindert het risico geleidelijk</li>
-                    <li>Ook meeroken is schadelijk</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Bloedsuiker controleren</h3>
-                <ul>
-                    <li>Diabetes is een grote risicofactor</li>
-                    <li>Goede HbA1c-controle vertraagt cataract</li>
-                    <li>Jaarlijkse oogcontrole bij diabetes</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Regelmatige oogcontrole</h3>
-                <ul>
-                    <li>Kinderen: screening bij consultatiebureau</li>
-                    <li>Vanaf 40 jaar: elke 2-3 jaar</li>
-                    <li>Bij risicofactoren: jaarlijks</li>
-                    <li>Vroegtijdige detectie maakt verschil</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="info-block">
-        <h2><span class="material-icons">restaurant_menu</span> Oog-vriendelijk dieet</h2>
-        <table>
-            <tr><th>Voedingsmiddel</th><th>Belangrijke stof</th><th>Werking</th></tr>
-            <tr><td>Spinazie, boerenkool</td><td>Luteine, zeaxanthine</td><td>UV-filter, antioxidant</td></tr>
-            <tr><td>Sinaasappels, kiwi, paprika</td><td>Vitamine C</td><td>Antioxidant, beschermt lens-eiwitten</td></tr>
-            <tr><td>Amandelen, zonnebloempitten</td><td>Vitamine E</td><td>Beschermt celmembranen</td></tr>
-            <tr><td>Zalm, makreel, sardines</td><td>Omega-3 (DHA/EPA)</td><td>Anti-inflammatoir</td></tr>
+            <tr><th>Voedingsmiddel</th><th>Werkzame stof</th><th>Mechanisme</th></tr>
+            <tr><td>Spinazie, boerenkool</td><td>Luteine, zeaxanthine</td><td>UV-filter, beschermt macula en lens</td></tr>
+            <tr><td>Sinaasappels, kiwi, paprika</td><td>Vitamine C</td><td>Antioxidant, beschermt crystallinen</td></tr>
+            <tr><td>Amandelen, zonnebloempitten</td><td>Vitamine E</td><td>Beschermt celmembranen lensepitheel</td></tr>
+            <tr><td>Zalm, makreel, sardines</td><td>Omega-3 (DHA/EPA)</td><td>Anti-inflammatoir, netvliesbescherming</td></tr>
             <tr><td>Eieren</td><td>Luteine, zeaxanthine, zink</td><td>Meervoudige bescherming</td></tr>
-            <tr><td>Wortelen, zoete aardappel</td><td>Beta-caroteen</td><td>Wordt omgezet in vitamine A</td></tr>
-            <tr><td>Knoflook, ui, sjalot</td><td>Zwavel</td><td>Stimuleert glutathion-productie</td></tr>
-            <tr><td>Blauwe bessen</td><td>Anthocyaninen</td><td>Krachtige antioxidant</td></tr>
-            <tr><td>Groene thee</td><td>Catechinen (EGCG)</td><td>Beschermt lens-eiwitten</td></tr>
-            <tr><td>Kurkuma</td><td>Curcumine</td><td>Anti-inflammatoir, antioxidant</td></tr>
+            <tr><td>Wortelen, zoete aardappel</td><td>Beta-caroteen</td><td>Pro-vitamine A, antioxidant</td></tr>
+            <tr><td>Knoflook, ui, sjalot</td><td>Organisch zwavel</td><td>Stimuleert glutathion-productie</td></tr>
+            <tr><td>Blauwe bessen</td><td>Anthocyaninen</td><td>Krachtige antioxidant, verbetert microcirculatie</td></tr>
+            <tr><td>Groene thee</td><td>Catechinen (EGCG)</td><td>Remt eiwitaggregatie in de lens</td></tr>
+            <tr><td>Kurkuma</td><td>Curcumine</td><td>Anti-inflammatoir, remt aldose-reductase</td></tr>
         </table>
+    </div>
+
+    <!-- Referenties -->
+    <div class="sources">
+        <h4>Referenties</h4>
+        <ol>
+            <li>Age-Related Eye Disease Study 2 (AREDS2) Research Group. "Lutein + zeaxanthin and omega-3 fatty acids for age-related macular degeneration." <em>JAMA.</em> 2013. <a href="https://pubmed.ncbi.nlm.nih.gov/23644932/" target="_blank">PubMed</a></li>
+            <li>Zhang Y, et al. "Research progress on antioxidants and protein aggregation inhibitors in cataract prevention." <em>Exp Ther Med.</em> 2024. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11574704/" target="_blank">PMC11574704</a></li>
+            <li>Dubois VD, Bhatt DK. "N-acetylcarnosine (NAC) drops for age-related cataract." <em>Cochrane Database Syst Rev.</em> 2017. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6464029/" target="_blank">PMC6464029</a></li>
+        </ol>
     </div>
 
 </div>
 
 <footer>
-    <p>catARACT &mdash; Informatief platform. Geen medisch advies. Raadpleeg altijd een oogarts.</p>
-    <p style="margin-top:8px">Gebouwd met <a href="https://claude.ai" target="_blank">Claude</a> | <a href="https://github.com/AnneVersion" target="_blank">Data Consultants</a></p>
+    <div class="disclaimer">
+        <strong>Disclaimer:</strong> Dit platform is informatief en vervangt geen medisch advies. Raadpleeg altijd een oogarts voor diagnose en behandeling.
+    </div>
+    <p>cat<span style="color:var(--teal)">ARACT</span> — Wetenschappelijk informatieplatform</p>
+    <p style="margin-top:4px">Gebouwd met <a href="https://claude.ai" target="_blank">Claude</a> | <a href="https://anneversion.github.io/dataconsultants" target="_blank">Data Consultants</a></p>
 </footer>
 
 </body>
